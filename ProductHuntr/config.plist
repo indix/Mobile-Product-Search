@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>indix_app_key</key>
+	<string>&lt;YOUR_INDIX_API_KEY&gt;</string>
+	<key>indix_app_id</key>
+	<string>&lt;YOUR_INDIX_API_ID&gt;</string>
+	<key>homeScreenBlurredBackgroundImage</key>
+	<string>home_background_image.png</string>
+	<key>homeScreenBlurredBackgroundTintColor</key>
+	<string>255,255,255,0.9</string>
+	<key>listTitleBlurredBackgroundImage</key>
+	<string>list_titlebar_bg.png</string>
+	<key>homeAppLogoImage</key>
+	<string>home_app_name.png</string>
+</dict>
+</plist>
