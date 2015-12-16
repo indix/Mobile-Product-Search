@@ -22,7 +22,7 @@ You can define your own configuration element like
 
 
 ## Third party code used in this application
-We have used lot of third party library and we acknowledge and appreciate their hard work. Below are list of libraries used in the development of application.
+We have used some third party library in this application and we acknowledge and appreciate their hard work. Below are the list of libraries used in the development of application.
 
 * [AFNetworking](https://github.com/AFNetworking/AFNetworking/blob/master/LICENSE)
 * [MBProgressHUD](https://github.com/jdg/MBProgressHUD/blob/master/LICENSE)
