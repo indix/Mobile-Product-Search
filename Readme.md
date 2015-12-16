@@ -1,4 +1,4 @@
-# App for Retailer from Indix example
+# Example that showcase product search in mobile app
 
 This app is a representation of how Indix API can be used to leverage information on stores, brands, products which forms the skeleton of Retail Industry.
 
