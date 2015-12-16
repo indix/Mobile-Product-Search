@@ -13,6 +13,10 @@
 @interface IXRProductListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,
 UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
+/**
+ ViewController that shows list of products based on search. It allows filtering, sorting and shows product in two different types - List/Grid
+ */
+
 
 @property (nonatomic, strong) IXMSearchType *searchtype;
 @property (nonatomic, strong) NSString *searchQuery;

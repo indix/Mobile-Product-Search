@@ -14,6 +14,10 @@
 
 @interface IXRCatalogParentImplViewController : UIViewController
 
+/**
+ View Controller to implement Tab-bar controller. 
+ */
+
 @property (nonatomic, weak) IXRCatalogViewController* parentVC;
 @property (nonatomic, readonly, strong) IXMProductDetail *productDetail;
 @property (nonatomic, readonly, strong) NSString *productTitle;

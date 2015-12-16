@@ -12,6 +12,10 @@
 
 @interface IXRSelectChoiceViewController : UITableViewController
 
+/**
+ ViewController that can be reused, use to do some selection.
+ */
+
 @property (nonatomic, strong) NSString *selectedChoice;
 @property (nonatomic, strong) NSArray *choicesArray;
 @property (nonatomic, assign) BOOL isMultipleChoice;

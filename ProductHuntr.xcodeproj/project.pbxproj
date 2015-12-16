@@ -111,8 +111,6 @@
 		F5D003761C212B2900DA492B /* IXRProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002FF1C212B2900DA492B /* IXRProductListViewController.m */; };
 		F5D003771C212B2900DA492B /* IXRSearchDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D003011C212B2900DA492B /* IXRSearchDisplayViewController.m */; };
 		F5D003781C212B2900DA492B /* IXRSelectChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D003031C212B2900DA492B /* IXRSelectChoiceViewController.m */; };
-		F5D003791C212B2900DA492B /* IXRSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D003051C212B2900DA492B /* IXRSettingViewController.m */; };
-		F5D0037A1C212B2900DA492B /* IXRWhatsNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D003071C212B2900DA492B /* IXRWhatsNewViewController.m */; };
 		F5D0037B1C212B2900DA492B /* IXScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0030A1C212B2900DA492B /* IXScannerViewController.m */; };
 		F5D0037C1C212B2900DA492B /* IXImageUrlView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0030D1C212B2900DA492B /* IXImageUrlView.m */; };
 		F5D0037D1C212B2900DA492B /* IXMCategoryFilterViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0030F1C212B2900DA492B /* IXMCategoryFilterViewTableViewCell.m */; };
@@ -301,10 +299,6 @@
 		F5D003011C212B2900DA492B /* IXRSearchDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXRSearchDisplayViewController.m; sourceTree = "<group>"; };
 		F5D003021C212B2900DA492B /* IXRSelectChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXRSelectChoiceViewController.h; sourceTree = "<group>"; };
 		F5D003031C212B2900DA492B /* IXRSelectChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXRSelectChoiceViewController.m; sourceTree = "<group>"; };
-		F5D003041C212B2900DA492B /* IXRSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXRSettingViewController.h; sourceTree = "<group>"; };
-		F5D003051C212B2900DA492B /* IXRSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXRSettingViewController.m; sourceTree = "<group>"; };
-		F5D003061C212B2900DA492B /* IXRWhatsNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXRWhatsNewViewController.h; sourceTree = "<group>"; };
-		F5D003071C212B2900DA492B /* IXRWhatsNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXRWhatsNewViewController.m; sourceTree = "<group>"; };
 		F5D003091C212B2900DA492B /* IXScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXScannerViewController.h; sourceTree = "<group>"; };
 		F5D0030A1C212B2900DA492B /* IXScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXScannerViewController.m; sourceTree = "<group>"; };
 		F5D0030C1C212B2900DA492B /* IXImageUrlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXImageUrlView.h; sourceTree = "<group>"; };
@@ -618,10 +612,6 @@
 				F5D003011C212B2900DA492B /* IXRSearchDisplayViewController.m */,
 				F5D003021C212B2900DA492B /* IXRSelectChoiceViewController.h */,
 				F5D003031C212B2900DA492B /* IXRSelectChoiceViewController.m */,
-				F5D003041C212B2900DA492B /* IXRSettingViewController.h */,
-				F5D003051C212B2900DA492B /* IXRSettingViewController.m */,
-				F5D003061C212B2900DA492B /* IXRWhatsNewViewController.h */,
-				F5D003071C212B2900DA492B /* IXRWhatsNewViewController.m */,
 				F5D003081C212B2900DA492B /* Scan */,
 			);
 			path = ViewController;
@@ -978,11 +968,9 @@
 				F5C337111C2034E700E4D3B1 /* ViewController.m in Sources */,
 				F5D003801C212B2900DA492B /* IXRCategorySelectGradientView.m in Sources */,
 				F5D0032E1C212B2900DA492B /* IXMCountryCode.m in Sources */,
-				F5D003791C212B2900DA492B /* IXRSettingViewController.m in Sources */,
 				F5D0033B1C212B2900DA492B /* IXProduct.m in Sources */,
 				F5D0036E1C212B2900DA492B /* NSString+URLEncoding.m in Sources */,
 				F5D003811C212B2900DA492B /* IXRSearchBarHolderView.m in Sources */,
-				F5D0037A1C212B2900DA492B /* IXRWhatsNewViewController.m in Sources */,
 				F5D0032C1C212B2900DA492B /* IXMBrandFilter.m in Sources */,
 				F5C3370E1C2034E700E4D3B1 /* AppDelegate.m in Sources */,
 				F5D0036B1C212B2900DA492B /* IXRPriceTypeUtils.m in Sources */,

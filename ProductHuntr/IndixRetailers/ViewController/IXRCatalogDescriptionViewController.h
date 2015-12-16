@@ -11,4 +11,9 @@
 
 @interface IXRCatalogDescriptionViewController : IXRCatalogParentImplViewController<IXRCatalogParentImplViewControllerDelegate>
 
+
+/**
+ ViewController that shows product related information for a product. It reads product information from IXRCatalogParentImplViewController
+ */
+
 @end

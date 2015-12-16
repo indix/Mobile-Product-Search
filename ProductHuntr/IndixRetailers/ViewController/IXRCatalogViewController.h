@@ -14,6 +14,10 @@
 
 @interface IXRCatalogViewController : UIViewController
 
+/**
+ ViewController to show Details of products
+ */
+
 // Public
 @property (nonatomic, strong) IXProduct *product;
 @property (nonatomic, strong) NSString *mixPanelSearchDescription;

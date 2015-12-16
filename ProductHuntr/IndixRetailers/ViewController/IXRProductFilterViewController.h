@@ -15,6 +15,10 @@
 
 @interface IXRProductFilterViewController : UIViewController
 
+/**
+ ViewController that allows to filter products by applying filtering
+ */
+
 
 @property (nonatomic, strong) IXMFilterObjects *filterObjects;
 @property (nonatomic, strong) IXMSelectedFilters *selectedFilters;

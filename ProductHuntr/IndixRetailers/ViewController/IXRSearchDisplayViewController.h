@@ -13,6 +13,10 @@
 
 @interface IXRSearchDisplayViewController : UIViewController
 
+/**
+ ViewController that shows Search bar, search suggestions and recent searches.
+ */
+
 @property (nonatomic, strong) UIImageView *blurredImageView;
 
 @property (nonatomic, assign) BOOL isFromHomeViewController;
