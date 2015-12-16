@@ -7,13 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "IndixRetailers.h"
 #import "IXRSearchBarHolderView.h"
-#import "IXScannerViewController.h"
-#import "IXRSearchDisplayViewController.h"
-#import "IXRProductListViewController.h"
-#import "IXRViewControllerHelper.h"
 #import "UIImageEffects.h"
-#import "IXRTheme.h"
 
 @interface ViewController ()<IXRSearchBarHolderViewDelegate, IXScannerViewControllerDelegate>
 

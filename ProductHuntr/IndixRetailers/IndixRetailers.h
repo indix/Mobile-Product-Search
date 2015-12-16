@@ -8,3 +8,4 @@
 
 #import "IXRCoreInitializer.h"
 #import "IXRTheme.h"
+#import "IXRViewControllerHelper.h"
