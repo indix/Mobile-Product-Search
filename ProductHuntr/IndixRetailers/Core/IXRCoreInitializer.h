@@ -15,9 +15,7 @@
  */
 
 // Call this first in application:viewDidLoad
-+ (void)initializeCoreFromPropertyListFileAtLocation:(NSString *)string;
++ (void)initializeIndixApiFromPropertyListFileAtLocation:(NSString *)string;
 
-// Initialize Indix api core
-+ (void)initializeIndixApi;
 
 @end

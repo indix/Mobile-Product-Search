@@ -11,38 +11,21 @@
 #import <AFNetworkActivityIndicatorManager.h>
 #import "IXRUtils.h"
 
-
-#define RETAILER_APP_VERSION 2
-#define RETAILER_APP_VERSION_NAME @"BlueBerry"
-
-#define USER_DEFAULT_WHAT_NEW_SEEN @"USER_DEFAULT_WHAT_NEW_SEEN"
-
 @interface IXRCoreInitializer ()
 
 
 
 @end
 
-static NSDictionary* propertyListDIct = nil;
 
 @implementation IXRCoreInitializer
 
 #pragma mark - Indix API Initialization methods
-+ (void)initializeIndixApi {
-    [IXApiCore setServiceTokenId:[IXRCoreInitializer readPropertyOfKey:@"indix_app_id"]
-                          appKey:[IXRCoreInitializer readPropertyOfKey:@"indix_app_key"]];
-}
-
-
-#pragma mark - Utilities methods
-
-+ (void)initializeCoreFromPropertyListFileAtLocation:(NSString *)string {
++ (void)initializeIndixApiFromPropertyListFileAtLocation:(NSString *)string {
     NSDictionary *dictionary = [IXRUtils readPropertiesFrompList:string];
-    propertyListDIct = dictionary;
+    [IXApiCore setServiceTokenId:[dictionary objectForKey:@"indix_app_id"]
+                          appKey:[dictionary objectForKey:@"indix_app_key"]];
 }
 
-+ (NSString *)readPropertyOfKey:(NSString *)string {
-    return [propertyListDIct objectForKey:string];
-}
 
 @end

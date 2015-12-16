@@ -119,6 +119,7 @@
 		F5D003821C212B2900DA492B /* IXRSearchSuggestionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D003181C212B2900DA492B /* IXRSearchSuggestionTableView.m */; };
 		F5D003831C212B2900DA492B /* PBSafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0031A1C212B2900DA492B /* PBSafariActivity.m */; };
 		F5D0038C1C212D8000DA492B /* IXProductResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5D0038A1C212D8000DA492B /* IXProductResultsTableViewCell.xib */; };
+		F5D0038F1C21582C00DA492B /* IndixRetailers.h in Sources */ = {isa = PBXBuildFile; fileRef = F5D0038E1C21582C00DA492B /* IndixRetailers.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -313,6 +314,7 @@
 		F5D003191C212B2900DA492B /* PBSafariActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSafariActivity.h; sourceTree = "<group>"; };
 		F5D0031A1C212B2900DA492B /* PBSafariActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSafariActivity.m; sourceTree = "<group>"; };
 		F5D0038A1C212D8000DA492B /* IXProductResultsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IXProductResultsTableViewCell.xib; sourceTree = "<group>"; };
+		F5D0038E1C21582C00DA492B /* IndixRetailers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndixRetailers.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -446,6 +448,7 @@
 				F5D002E61C212B2900DA492B /* Utils */,
 				F5D002F31C212B2900DA492B /* ViewController */,
 				F5D0030B1C212B2900DA492B /* Views */,
+				F5D0038E1C21582C00DA492B /* IndixRetailers.h */,
 			);
 			path = IndixRetailers;
 			sourceTree = "<group>";
@@ -991,6 +994,7 @@
 				F5D0037C1C212B2900DA492B /* IXImageUrlView.m in Sources */,
 				F5D003821C212B2900DA492B /* IXRSearchSuggestionTableView.m in Sources */,
 				F5D0032F1C212B2900DA492B /* IXMDisplayCategoryFilter.m in Sources */,
+				F5D0038F1C21582C00DA492B /* IndixRetailers.h in Sources */,
 				F5C3370B1C2034E700E4D3B1 /* main.m in Sources */,
 				F5D003221C212B2900DA492B /* IXRApiParser.m in Sources */,
 				F5D0037D1C212B2900DA492B /* IXMCategoryFilterViewTableViewCell.m in Sources */,

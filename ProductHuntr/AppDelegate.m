@@ -8,8 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "IXRCoreInitializer.h"
-#import "IXRTheme.h"
+#import "IndixRetailers/IndixRetailers.h"
 
 @interface AppDelegate ()
 
@@ -20,11 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [IXRCoreInitializer initializeCoreFromPropertyListFileAtLocation:@"local_config"];
+    [IXRCoreInitializer initializeIndixApiFromPropertyListFileAtLocation:@"config"];
     [[IXRTheme instance] setThemeFrompList:@"config"];
     
     
-    [IXRCoreInitializer initializeIndixApi];
+    
     
     [self setUpTheme];
     
