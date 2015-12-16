@@ -16,7 +16,6 @@
 #import "IXMRecentSearchItem.h"
 #import "IXRApiV2Parser.h"
 #import "IXMCountryCode.h"
-#import "IXMAlertThreshold.h"
 #import "IXMFreshness.h"
 #import "IXMCategoryFilter.h"
 #import "IXMBrandFilter.h"
@@ -27,6 +26,9 @@
 
 @interface IXRetailerHelper : NSObject
 
+/**
+    Helper methods that UI uses to get data from server. It seperates server code from UI so you can feel free to change the server to whatever you want.
+ */
 
 // Search Suggestion
 + (void)requestSearchSuggestionForQuery:(NSString *)query withManager:(AFHTTPRequestOperationManager *)operationManger success:(void (^)(AFHTTPRequestOperation *operation, NSArray *suggestions))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;

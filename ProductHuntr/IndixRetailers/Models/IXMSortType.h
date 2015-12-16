@@ -16,6 +16,10 @@ extern NSString * const kIXRSortTypePriceLowToHigh;
 
 @interface IXMSortType : NSObject
 
+/**
+ Model to sort products
+ */
+
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *key;
 

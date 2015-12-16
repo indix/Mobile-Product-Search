@@ -13,6 +13,10 @@ extern NSString * const kIXRCountryCodeIN;
 
 @interface IXMCountryCode : NSObject
 
+/**
+ Model to choose country code
+ */
+
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *key;
 

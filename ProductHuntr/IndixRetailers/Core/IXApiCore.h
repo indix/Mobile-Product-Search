@@ -14,6 +14,10 @@ extern NSString * const kIXAPISearchSuggestionEndPoint;
 
 @interface IXApiCore : NSObject
 
+/**
+ Helper methods to do API call from INDIX API V1
+ */
+
 // App ID and Key to make this api work
 + (NSString *)getServiceTokenAppId;
 + (NSString *)getServiceTokenAppKey;

@@ -10,6 +10,10 @@
 
 @interface IXMFreshness : NSObject
 
+/**
+ Models to send freshness information
+ */
+
 @property (nonatomic, strong) NSString *value;
 @property (nonatomic, assign) NSInteger days;
 

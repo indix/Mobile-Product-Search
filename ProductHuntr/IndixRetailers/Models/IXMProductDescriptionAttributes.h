@@ -10,6 +10,10 @@
 
 @interface IXMProductDescriptionAttributes : NSObject
 
+/**
+ Model for storing product description attributes
+ */
+
 @property (nonatomic, strong) NSString *title;
 
 @property (nonatomic, strong) NSString *value;

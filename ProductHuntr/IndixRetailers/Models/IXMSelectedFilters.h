@@ -20,6 +20,10 @@ extern NSString * const kIXRAvailabilityOutOfStock;
 
 @interface IXMSelectedFilters : NSObject
 
+/**
+ Model for filters
+ */
+
 @property (nonatomic, strong) NSMutableArray *selectedStores;
 @property (nonatomic, strong) NSMutableArray *selectedCategory;
 @property (nonatomic, strong) NSMutableArray *selectedBrand;

@@ -13,6 +13,10 @@
 
 @interface IXApiV2Core : NSObject
 
+/**
+ Helper methods to do API call from INDIX API V2
+ */
+
 // App ID and Key to make this api work
 + (NSString *)getServiceTokenAppId;
 + (NSString *)getServiceTokenAppKey;

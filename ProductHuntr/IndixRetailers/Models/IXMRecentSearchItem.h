@@ -10,6 +10,10 @@
 
 @interface IXMRecentSearchItem : NSObject<NSCoding>
 
+/**
+ Model to store Recent search item attributes
+ */
+
 @property (nonatomic, strong) NSString *query;
 @property (nonatomic, strong) NSString *type;
 

@@ -10,6 +10,10 @@
 
 @interface IXRTheme : NSObject
 
+/**
+ Helper class to save some theme related attributes which UI can use.s
+ */
+
 @property (nonatomic, strong) NSDictionary *customThemeProperties;
 @property (nonatomic, strong, readonly) UIColor *navigationBarBarTintColor;
 @property (nonatomic, strong, readonly) UIColor *navigationBarTintColor;

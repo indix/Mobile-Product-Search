@@ -10,20 +10,12 @@
 
 @interface IXRCoreInitializer : NSObject
 
+/**
+    Used in app delegate to initialize the indix api and helpers with 'indix api key and themes'
+ */
+
 // Call this first in application:viewDidLoad
 + (void)initializeCoreFromPropertyListFileAtLocation:(NSString *)string;
-
-
-+ (void)handleApplication:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;
-
-+ (void)handleApplication:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error;
-
-+ (void)handleApplication:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo;
-
-
-+ (void)requestSeenWhatNewControllerForCurrentVersion;
-+ (BOOL)shouldShowWhatNewControllerForCurrentVersion;
-
 
 // Initialize Indix api core
 + (void)initializeIndixApi;

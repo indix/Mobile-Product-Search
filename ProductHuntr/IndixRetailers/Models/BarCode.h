@@ -12,6 +12,9 @@
 
 @interface Barcode : NSObject
 
+/**
+ Model for barcode
+ */
 + (Barcode * )processMetadataObject:(AVMetadataMachineReadableCodeObject*) code;
 - (NSString *) getBarcodeType;
 - (NSString *) getBarcodeData;

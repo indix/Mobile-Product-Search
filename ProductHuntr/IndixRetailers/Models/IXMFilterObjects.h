@@ -14,6 +14,10 @@
 
 @interface IXMFilterObjects : NSObject
 
+/**
+ Model for filter
+ */
+
 @property (nonatomic, strong) NSArray *storeFilters;
 @property (nonatomic, strong) NSArray *categoryFilters;
 @property (nonatomic, strong) NSArray *brandFilters;

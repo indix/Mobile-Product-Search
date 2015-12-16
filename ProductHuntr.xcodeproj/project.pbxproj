@@ -34,7 +34,6 @@
 		F5D003281C212B2900DA492B /* IXSearchSuggestionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0028D1C212B2900DA492B /* IXSearchSuggestionHelper.m */; };
 		F5D003291C212B2900DA492B /* IndixRetailer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D0028E1C212B2900DA492B /* IndixRetailer.storyboard */; };
 		F5D0032A1C212B2900DA492B /* BarCode.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002911C212B2900DA492B /* BarCode.m */; };
-		F5D0032B1C212B2900DA492B /* IXMAlertThreshold.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002931C212B2900DA492B /* IXMAlertThreshold.m */; };
 		F5D0032C1C212B2900DA492B /* IXMBrandFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002951C212B2900DA492B /* IXMBrandFilter.m */; };
 		F5D0032D1C212B2900DA492B /* IXMCategoryFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002971C212B2900DA492B /* IXMCategoryFilter.m */; };
 		F5D0032E1C212B2900DA492B /* IXMCountryCode.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002991C212B2900DA492B /* IXMCountryCode.m */; };
@@ -191,8 +190,6 @@
 		F5D0028E1C212B2900DA492B /* IndixRetailer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IndixRetailer.storyboard; sourceTree = "<group>"; };
 		F5D002901C212B2900DA492B /* BarCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarCode.h; sourceTree = "<group>"; };
 		F5D002911C212B2900DA492B /* BarCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarCode.m; sourceTree = "<group>"; };
-		F5D002921C212B2900DA492B /* IXMAlertThreshold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXMAlertThreshold.h; sourceTree = "<group>"; };
-		F5D002931C212B2900DA492B /* IXMAlertThreshold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXMAlertThreshold.m; sourceTree = "<group>"; };
 		F5D002941C212B2900DA492B /* IXMBrandFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXMBrandFilter.h; sourceTree = "<group>"; };
 		F5D002951C212B2900DA492B /* IXMBrandFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXMBrandFilter.m; sourceTree = "<group>"; };
 		F5D002961C212B2900DA492B /* IXMCategoryFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXMCategoryFilter.h; sourceTree = "<group>"; };
@@ -483,8 +480,6 @@
 			children = (
 				F5D002901C212B2900DA492B /* BarCode.h */,
 				F5D002911C212B2900DA492B /* BarCode.m */,
-				F5D002921C212B2900DA492B /* IXMAlertThreshold.h */,
-				F5D002931C212B2900DA492B /* IXMAlertThreshold.m */,
 				F5D002941C212B2900DA492B /* IXMBrandFilter.h */,
 				F5D002951C212B2900DA492B /* IXMBrandFilter.m */,
 				F5D002961C212B2900DA492B /* IXMCategoryFilter.h */,
@@ -983,7 +978,6 @@
 				F5D0037E1C212B2900DA492B /* IXProductResultsCell.m in Sources */,
 				F5D003281C212B2900DA492B /* IXSearchSuggestionHelper.m in Sources */,
 				F5D003341C212B2900DA492B /* IXMProductDetail.m in Sources */,
-				F5D0032B1C212B2900DA492B /* IXMAlertThreshold.m in Sources */,
 				F5D003721C212B2900DA492B /* IXRCatalogParentImplViewController.m in Sources */,
 				F5D003301C212B2900DA492B /* IXMFilterObjects.m in Sources */,
 				F5D003231C212B2900DA492B /* IXRApiV2Parser.m in Sources */,

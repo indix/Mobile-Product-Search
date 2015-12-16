@@ -14,6 +14,10 @@
 
 @interface IXRApiV2Parser : NSObject
 
+/**
+ Helper methods to do Parsing for INDIX API V2
+ */
+
 + (IXMProductDetail *)parseDetailFromProductDetailDictionary:(NSDictionary *)dictionary;
 + (NSArray *)parsePriceDetailsFromProductDetailDictionary:(NSDictionary *)dictionary;
 

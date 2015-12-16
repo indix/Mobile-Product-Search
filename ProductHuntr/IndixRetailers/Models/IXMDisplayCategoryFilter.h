@@ -11,6 +11,10 @@
 
 @protocol IXMDisplayCategoryFilterDelagete;
 
+/**
+ Model for filter
+ */
+
 @interface IXMDisplayCategoryFilter : NSObject
 
 @property (nonatomic, strong) NSMutableArray *categoryDislayArray;

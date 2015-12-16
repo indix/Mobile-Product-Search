@@ -31,11 +31,6 @@
     return controller;
 }
 
-+ (UIViewController *)settingAboutViewController:(UIStoryboard *)storyboard {
-    UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"RetailAboutVC"];
-    return controller;
-}
-
 
 
 + (IXRProductListViewController *)productListViewController:(UIStoryboard *)storyboard {

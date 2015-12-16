@@ -10,6 +10,10 @@
 
 @interface IXProduct : NSObject
 
+/**
+ Model to store product attributes
+ */
+
 @property (nonatomic, strong) NSString *mpid;
 @property (nonatomic, strong) NSString *pid;
 @property (nonatomic, strong) NSString *name;

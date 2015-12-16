@@ -33,48 +33,6 @@ static NSDictionary* propertyListDIct = nil;
                           appKey:[IXRCoreInitializer readPropertyOfKey:@"indix_app_key"]];
 }
 
-#pragma mark - Parse Initialization methods
-
-
-+ (void)requestSeenWhatNewControllerForCurrentVersion {
-    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:RETAILER_APP_VERSION] forKey:USER_DEFAULT_WHAT_NEW_SEEN];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-}
-
-+ (BOOL)shouldShowWhatNewControllerForCurrentVersion {
-    NSNumber *key = [[NSUserDefaults standardUserDefaults] objectForKey:USER_DEFAULT_WHAT_NEW_SEEN];
-    if (key) {
-        NSInteger version = [key integerValue];
-        if (version >= RETAILER_APP_VERSION) {
-            return false;
-        }
-    }
-    return true;
-    
-}
-
-
-
-
-+ (void)handleApplication:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    
-    
-}
-
-+ (void)handleApplication:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-    // Parse Push Notification
-    if (error.code == 3010) {
-        NSLog(@"Push notifications are not supported in the iOS Simulator.");
-    } else {
-        // show some alert or otherwise handle the failure to register.
-        NSLog(@"application:didFailToRegisterForRemoteNotificationsWithError: %@", error);
-    }
-}
-
-+ (void)handleApplication:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    
-    // Parse Push Notificaiton
-}
 
 #pragma mark - Utilities methods
 

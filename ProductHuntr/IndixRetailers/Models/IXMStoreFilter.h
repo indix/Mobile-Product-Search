@@ -10,6 +10,10 @@
 
 @interface IXMStoreFilter : NSObject
 
+/**
+ Model for filter
+ */
+
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *count;
 @property (nonatomic, strong) NSString *key; // id

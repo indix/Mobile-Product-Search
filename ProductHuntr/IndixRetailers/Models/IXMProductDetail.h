@@ -11,6 +11,9 @@
 
 @interface IXMProductDetail : NSObject
 
+/**
+ Model to store product detail attributes
+ */
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *imageURL;

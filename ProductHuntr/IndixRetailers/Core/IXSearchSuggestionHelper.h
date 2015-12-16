@@ -12,6 +12,9 @@
 @protocol IXSearchSuggestionHelperDelegate;
 
 @interface IXSearchSuggestionHelper : NSObject
+/**
+  Reusable class that assist in implementing search suggestions
+ */
 
 - (instancetype)init;
 

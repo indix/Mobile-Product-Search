@@ -11,6 +11,9 @@
 
 @interface IXMPriceAggregator : NSObject
 
+/**
+    Model to aggregate price when displayed
+ */
 
 @property (nonatomic, strong, readonly) NSString *imageUrl;
 @property (nonatomic, strong, readonly) NSString *priceRange;

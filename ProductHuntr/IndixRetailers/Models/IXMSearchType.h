@@ -15,6 +15,10 @@ extern NSString * const kIXRSearchTypeMPN;
 
 @interface IXMSearchType : NSObject
 
+/**
+ Model to select search type
+ */
+
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *key;
 

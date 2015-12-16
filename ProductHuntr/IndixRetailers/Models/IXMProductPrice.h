@@ -10,6 +10,10 @@
 
 @interface IXMProductPrice : NSObject
 
+/**
+ Model to store product price attributes
+ */
+
 @property (nonatomic, strong) NSString *storeName;
 @property (nonatomic, strong) NSString *sellerName;
 @property (nonatomic, strong) NSString *listPrice;

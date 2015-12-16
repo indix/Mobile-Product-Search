@@ -14,8 +14,11 @@
 
 @interface IXRViewControllerHelper : NSObject
 
+/**
+    Helper class to call right view controllers and call them with parameters
+ */
+
 + (UINavigationController *)settingChoiceViewController:(UIStoryboard *)storyboard;
-+ (UIViewController *)settingAboutViewController:(UIStoryboard *)storyboard;
 + (IXScannerViewController *)scannerViewController:(UIStoryboard *)storyboard;
 + (IXRProductListViewController *)productListViewController:(UIStoryboard *)storyboard;
 + (IXRSearchDisplayViewController *)searchDisplayViewController:(UIStoryboard *)storyboard;
