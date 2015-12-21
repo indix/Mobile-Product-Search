@@ -33,7 +33,7 @@
     UIImage *blurredBackgroundImage = [UIImageEffects imageByApplyingBlurToImage:backgroundImage withRadius:25.0 tintColor:[[IXRTheme instance] homeScreenBlurredBackgroundTintColor] saturationDeltaFactor:1.5 maskImage:nil];
     self.backgroundImageView.image = blurredBackgroundImage;
     
-    self.homeAppLogo.image = [UIImage imageNamed:@"home_app_name.png"];
+    self.homeAppLogo.image = [UIImage imageNamed:[[IXRTheme instance] homeAppLogoImage]];
     self.retailerStoryboard = [IXRViewControllerHelper retailerStoryboard];
 }
 
