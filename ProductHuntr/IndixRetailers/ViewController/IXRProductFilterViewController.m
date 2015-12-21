@@ -299,17 +299,19 @@
         [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
     else if ([self.segmentControl selectedSegmentIndex] == 3) {
-        if (indexPath.row == 0) {
-            self.selectedFilters.availabilityFilterType = kIXRAvailabilityAll;
+        if (indexPath.section == 0) {
+            if (indexPath.row == 0) {
+                self.selectedFilters.availabilityFilterType = kIXRAvailabilityAll;
+            }
+            else if (indexPath.row == 1) {
+                self.selectedFilters.availabilityFilterType = kIXRAvailabilityInStock;
+            }
+            else if (indexPath.row == 2) {
+                self.selectedFilters.availabilityFilterType = kIXRAvailabilityOutOfStock;
+            }
+            
+            [tableView reloadData];
         }
-        else if (indexPath.row == 1) {
-            self.selectedFilters.availabilityFilterType = kIXRAvailabilityInStock;
-        }
-        else if (indexPath.row == 2) {
-            self.selectedFilters.availabilityFilterType = kIXRAvailabilityOutOfStock;
-        }
-        
-        [tableView reloadData];
     }
     else if ([self.segmentControl selectedSegmentIndex] == 0) {
         IXMCategoryFilter *filter = [self.categoryDisplay objectAtIndex:indexPath.row];
