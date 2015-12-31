@@ -9,6 +9,7 @@
 #import "IXRetailerHelper.h"
 #import "IXApiV2Core.h"
 #import "IXMFreshness.h"
+#import "IXRUtils.h"
 
 #define PIN_NAME @"pin"
 
@@ -151,6 +152,25 @@ NSInteger const kIXRMaxRecentSearchCount = 10;
     
 }
 
++ (void)requestURLSearchForQuery:(NSString *)url page:(NSString *)page sortBy:(IXMSortType *)sortType withManager:(AFHTTPRequestOperationManager *)operationManger success:(void (^)(AFHTTPRequestOperation *operation, NSArray *productsArray, NSInteger count))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    
+    NSDictionary *queryParameter = [self prepareSearchParameterQueryWithQuery:url page:page sortBy:sortType settings:nil];
+    
+    [IXApiV2Core requestURLSearchForQuery:queryParameter withManager:operationManger success:^(AFHTTPRequestOperation *operation, id outputObject) {
+        
+        
+        NSInteger count = [IXRApiV2Parser parseProductCountFromSearchDictionary:outputObject];
+        
+        NSArray *prodmodalArray = [IXRApiV2Parser parseProductArrayFromSearchDictionary:outputObject];
+        
+        success(operation, prodmodalArray, count);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        failure(operation, error);
+    }];
+    
+}
+
 // settings
 // filter_enabled [NSNumber -> bool]
 // filter [IXMSelectedFilter]
@@ -174,6 +194,23 @@ NSInteger const kIXRMaxRecentSearchCount = 10;
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         failure(operation, error);
     }];
+    
+}
+
++ (void)requestSearchProductFromShareText:(NSString *)shareText page:(NSString *)page sortBy:(IXMSortType *)sortType withManager:(AFHTTPRequestOperationManager *)operationManger success:(void (^)(AFHTTPRequestOperation *operation, NSArray *productsArray, NSInteger count))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    // get url from share text.
+    NSString *urlString = [IXRUtils extractUrlFromShareText:shareText];
+    if (urlString == nil) {
+        failure(nil, nil);
+    }
+    else {
+        [self requestURLSearchForQuery:urlString page:nil sortBy:nil withManager:nil success:^(AFHTTPRequestOperation *operation, NSArray *productsArray, NSInteger count) {
+            success(operation, productsArray, count);
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            failure(operation, error);
+        }];
+        
+    }
     
 }
 
@@ -436,6 +473,28 @@ NSInteger const kIXRMaxRecentSearchCount = 10;
 
 #pragma mark - Product Catalog and Offer
 
++ (void)requestProductCatalogForProductUsingUrl:(NSString *)url withManager:(AFHTTPRequestOperationManager *)operationManger success:(void (^)(AFHTTPRequestOperation *operation, IXProduct *product, IXMProductDetail *productDesc, NSArray * productprices, NSInteger offerCount))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    
+    NSMutableDictionary *queryparameter = [[NSMutableDictionary alloc] init];
+    [queryparameter setObject:url forKey:@"url"];
+    IXMCountryCode *countryCode = [self requestCountyCode];
+    [queryparameter setObject:countryCode.key forKey:@"country_code"];
+    
+    [IXApiV2Core requestProductDescriptionForQuery:queryparameter withManager:operationManger success:^(AFHTTPRequestOperation *operation, id outputObject) {
+        
+        IXProduct *product = [IXRApiV2Parser parseProductFromProductDetailDictionary:outputObject];
+        IXMProductDetail *productDesc = [IXRApiV2Parser parseDetailFromProductDetailDictionary:outputObject];
+        NSArray *productPriceArray = [IXRApiV2Parser parsePriceDetailsFromProductDetailDictionary:outputObject];
+        NSInteger offerCount = [IXRApiV2Parser parseProductOfferCountFromProductDetailDictionary:outputObject];
+        
+        success(operation, product, productDesc, productPriceArray, offerCount);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        failure(operation, error);
+    }];
+}
+
+
 + (void)requestProductCatalogForProductUsingMPid:(NSString *)mpid withManager:(AFHTTPRequestOperationManager *)operationManger success:(void (^)(AFHTTPRequestOperation *operation, IXProduct *product, IXMProductDetail *productDesc, NSArray * productprices, NSInteger offerCount))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     
     NSMutableDictionary *queryparameter = [[NSMutableDictionary alloc] init];
@@ -506,6 +565,22 @@ NSInteger const kIXRMaxRecentSearchCount = 10;
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         failure(operation, error);
     }];
+}
+
+
+
+// Favorites
+
++ (void)requestAddToFavorites:(IXProduct *)product success:(void (^)(IXMSavedProduct *saved_product))success failure:(void (^)(NSError *error))failure {
+    
+}
+
++ (void)requestCheckIfAddedToFavorites:(IXProduct *)product success:(void (^)(IXMSavedProduct *saved_product))success failure:(void (^)(NSError *error))failure {
+    
+}
+
++ (void)requestRemoveFromFavorites:(IXMSavedProduct *)saved_product success:(void (^)(void))success failure:(void (^)(NSError *error))failure {
+    
 }
 
 

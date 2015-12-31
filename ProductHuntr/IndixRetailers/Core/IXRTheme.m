@@ -105,6 +105,14 @@
     return @"home_app_name.png";
 }
 
+- (NSString *)widgetAppLogoImage {
+    NSString *str = [self readStringPropertiesForKey:@"widgetAppLogoImage"];
+    if (str) {
+        return str;
+    }
+    return @"home_app_name.png";
+}
+
 - (NSString *)readStringPropertiesForKey:(NSString *)key {
     if ([_customThemeProperties objectForKey:key]) {
         NSString *color = [_customThemeProperties objectForKey:key];

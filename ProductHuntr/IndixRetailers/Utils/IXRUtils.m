@@ -134,6 +134,21 @@
     return nil;
 }
 
-
++ (NSString *)extractUrlFromShareText:(NSString *)shareText {
+    NSDataDetector* detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:nil];
+    NSArray* matches = [detector matchesInString:shareText options:0 range:NSMakeRange(0, [shareText length])];
+    if (matches.count > 0) {
+        for (id object in matches) {
+            if ([object resultType] == NSTextCheckingTypeLink) {
+                NSURL *url = [object URL];
+                NSString *urlString = [url absoluteString];
+                if ([urlString hasPrefix:@"http"]) {
+                    return urlString;
+                }
+            }
+        }
+    }
+    return nil;
+}
 
 @end

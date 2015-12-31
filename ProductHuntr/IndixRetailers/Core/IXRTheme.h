@@ -24,6 +24,7 @@
 @property (nonatomic, strong, readonly) UIColor *homeScreenBlurredBackgroundTintColor;
 @property (nonatomic, strong, readonly) NSString *listTitleBlurredBackgroundImage;
 @property (nonatomic, strong, readonly) NSString *homeAppLogoImage;
+@property (nonatomic, strong, readonly) NSString *widgetAppLogoImage;
 
 + (id)instance;
 

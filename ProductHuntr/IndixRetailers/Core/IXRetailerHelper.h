@@ -22,6 +22,7 @@
 #import "IXMStoreFilter.h"
 #import "IXMFilterObjects.h"
 #import "IXMSelectedFilters.h"
+#import "IXMSavedProduct.h"
 
 
 @interface IXRetailerHelper : NSObject
@@ -34,6 +35,8 @@
 + (void)requestSearchSuggestionForQuery:(NSString *)query withManager:(AFHTTPRequestOperationManager *)operationManger success:(void (^)(AFHTTPRequestOperation *operation, NSArray *suggestions))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 + (void)requestProductCatalogForProductUsingMPid:(NSString *)mpid withManager:(AFHTTPRequestOperationManager *)operationManger success:(void (^)(AFHTTPRequestOperation *operation, IXProduct *product,IXMProductDetail *productDesc, NSArray * productprices, NSInteger offerCount))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+
++ (void)requestProductCatalogForProductUsingUrl:(NSString *)url withManager:(AFHTTPRequestOperationManager *)operationManger success:(void (^)(AFHTTPRequestOperation *operation, IXProduct *product, IXMProductDetail *productDesc, NSArray * productprices, NSInteger offerCount))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 
 // Search
@@ -51,6 +54,8 @@
 
 + (void)requestSubCategoryFacetsForQuery:(NSString *)query forCategory:(IXMCategoryFilter *)category withManager:(AFHTTPRequestOperationManager *)operationManger success:(void (^)(AFHTTPRequestOperation *operation, NSInteger count, IXMFilterObjects *filter))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
++ (void)requestSearchProductFromShareText:(NSString *)shareText page:(NSString *)page sortBy:(IXMSortType *)sortType withManager:(AFHTTPRequestOperationManager *)operationManger success:(void (^)(AFHTTPRequestOperation *operation, NSArray *productsArray, NSInteger count))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+
 // Recent Search
 + (void)addRecentSearchItemWithQuery:(NSString *)query SearchType:(NSString *)searchTypeKeyword result:(void (^)(BOOL success))result;
 + (void)retreiveRecentlySearchItemWithResult:(void (^)(NSArray *objects, NSError *error))result;
@@ -60,6 +65,11 @@
 + (BOOL)isPaginationPossibleForOffersInStores:(NSInteger)page andTotalCount:(NSInteger)count;
 + (void)requestProductOffersForProduct:(IXProduct *)product page:(NSString *)page withManager:(AFHTTPRequestOperationManager *)operationManger success:(void (^)(AFHTTPRequestOperation *operation, NSArray * productprices, NSInteger offerCount))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
+
+// Favorites
++ (void)requestAddToFavorites:(IXProduct *)product success:(void (^)(IXMSavedProduct *saved_product))success failure:(void (^)(NSError *error))failure;
++ (void)requestCheckIfAddedToFavorites:(IXProduct *)product success:(void (^)(IXMSavedProduct *saved_product))success failure:(void (^)(NSError *error))failure;
++ (void)requestRemoveFromFavorites:(IXMSavedProduct *)saved_product success:(void (^)(void))success failure:(void (^)(NSError *error))failure;
 
 // CountyCode
 + (void)requestSaveCountyCode:(IXMCountryCode *)code;

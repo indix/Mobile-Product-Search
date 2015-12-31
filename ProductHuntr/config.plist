@@ -14,5 +14,7 @@
 	<string>list_titlebar_bg.png</string>
 	<key>homeAppLogoImage</key>
 	<string>home_app_name.png</string>
+	<key>widgetAppLogoImage</key>
+	<string>home_app_name.png</string>
 </dict>
 </plist>

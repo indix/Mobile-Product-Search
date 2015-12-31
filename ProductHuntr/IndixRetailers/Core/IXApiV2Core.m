@@ -110,6 +110,20 @@ NSInteger const kIXAPIV2ProductCount = 10;
     return operation;
 }
 
++ (AFHTTPRequestOperation *)requestURLSearchForQuery:(NSDictionary *)dictionary withManager:(AFHTTPRequestOperationManager *)operationManger success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    
+    NSDictionary *queryParameter = [self patchQueryToProductSearchUsingNumber:dictionary];
+    [queryParameter setValue:[dictionary objectForKey:@"query"] forKey:@"url"];
+    
+    AFHTTPRequestOperation * operation = [self httpGetRequestForEndPoint:kIXAPIV2SearchProductsEndPoint parameter:queryParameter withManager:operationManger success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        success(operation, responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        failure(operation, error);
+    }];
+    
+    return operation;
+}
+
 + (AFHTTPRequestOperation *)requestGeneralSearchForQuery:(NSDictionary *)dictionary withManager:(AFHTTPRequestOperationManager *)operationManger success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     
     NSMutableDictionary *queryParameter = [self patchQueryToProductSearch:dictionary];

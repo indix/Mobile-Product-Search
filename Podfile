@@ -10,6 +10,10 @@ pod 'REMenu', '~> 1.10'
 pod 'PBWebViewController'
 end
 
+target 'SearchWidget' do
+pod 'AFNetworking', '~> 2.5'
+end
+
 target 'ProductHuntrTests' do
 pod 'AFNetworking', '~> 2.5'
 pod 'MBProgressHUD'

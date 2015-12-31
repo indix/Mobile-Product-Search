@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		616677D11D5A5EBCEC0D534D /* libPods-SearchWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 483EBFCF620D535942CA44FB /* libPods-SearchWidget.a */; };
 		A6DB01E7D4611EC3BCAECB6B /* libPods-ProductHuntrTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0513BF9437B9CAF4F103EFE /* libPods-ProductHuntrTests.a */; };
 		C0E27CE84FC61B9FF114F317 /* libPods-ProductHuntrUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 300AF2EC35817D84710B239E /* libPods-ProductHuntrUITests.a */; };
 		E42CE1E4F916ED709E5145BE /* libPods-ProductHuntr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6FB6D3F9B40667041F131B6 /* libPods-ProductHuntr.a */; };
@@ -15,6 +16,98 @@
 		F565D9C51C203B4500297959 /* home_background_image.png in Resources */ = {isa = PBXBuildFile; fileRef = F565D9C21C203B4500297959 /* home_background_image.png */; };
 		F565D9C91C203E2600297959 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = F565D9C81C203E2600297959 /* config.plist */; };
 		F565D9CD1C2040C000297959 /* local_config.plist in Resources */ = {isa = PBXBuildFile; fileRef = F565D9CC1C2040C000297959 /* local_config.plist */; };
+		F5712C961C32A56B00526585 /* SearchWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F5712C8B1C32A56A00526585 /* SearchWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F5712C9E1C32A6DB00526585 /* IXWSearchProductResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5712C9C1C32A6DB00526585 /* IXWSearchProductResultsCell.xib */; };
+		F5712C9F1C32A6DB00526585 /* WidgetInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5712C9D1C32A6DB00526585 /* WidgetInterface.storyboard */; };
+		F5712CA61C32A70300526585 /* InitialShareTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5712CA11C32A70300526585 /* InitialShareTableViewController.m */; };
+		F5712CA71C32A70300526585 /* IXWSearchProductResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5712CA31C32A70300526585 /* IXWSearchProductResultsCell.m */; };
+		F5712CA81C32A70300526585 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5712CA51C32A70300526585 /* ShareViewController.m */; };
+		F5712CAB1C32A8AF00526585 /* IXMSavedProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = F5712CAA1C32A8AF00526585 /* IXMSavedProduct.m */; };
+		F575C9481C35025100DA0DC8 /* InitialShareTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5712CA11C32A70300526585 /* InitialShareTableViewController.m */; };
+		F575C9491C35025800DA0DC8 /* IXWSearchProductResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5712CA31C32A70300526585 /* IXWSearchProductResultsCell.m */; };
+		F575C94A1C35025B00DA0DC8 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5712CA51C32A70300526585 /* ShareViewController.m */; };
+		F575C94B1C35026300DA0DC8 /* IXWSearchProductResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5712C9C1C32A6DB00526585 /* IXWSearchProductResultsCell.xib */; };
+		F575C94D1C35026D00DA0DC8 /* WidgetInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5712C9D1C32A6DB00526585 /* WidgetInterface.storyboard */; };
+		F575C94E1C3502AD00DA0DC8 /* IXRetailerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002871C212B2900DA492B /* IXRetailerHelper.m */; };
+		F575C94F1C3502BA00DA0DC8 /* BarCode.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002911C212B2900DA492B /* BarCode.m */; };
+		F575C9501C3502BE00DA0DC8 /* IXApiCore.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0027D1C212B2900DA492B /* IXApiCore.m */; };
+		F575C9511C3502C100DA0DC8 /* IXApiV2Core.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0027F1C212B2900DA492B /* IXApiV2Core.m */; };
+		F575C9521C3502C400DA0DC8 /* IXRApiParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002811C212B2900DA492B /* IXRApiParser.m */; };
+		F575C9531C3502C600DA0DC8 /* IXRApiV2Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002831C212B2900DA492B /* IXRApiV2Parser.m */; };
+		F575C9541C3502C900DA0DC8 /* IXRCoreInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002851C212B2900DA492B /* IXRCoreInitializer.m */; };
+		F575C9551C3502CF00DA0DC8 /* IXRTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002891C212B2900DA492B /* IXRTheme.m */; };
+		F575C9561C3502D100DA0DC8 /* IXRViewControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0028B1C212B2900DA492B /* IXRViewControllerHelper.m */; };
+		F575C9571C3502D600DA0DC8 /* IXSearchSuggestionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0028D1C212B2900DA492B /* IXSearchSuggestionHelper.m */; };
+		F575C9581C3502DB00DA0DC8 /* IXMBrandFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002951C212B2900DA492B /* IXMBrandFilter.m */; };
+		F575C9591C3502DF00DA0DC8 /* IXMCategoryFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002971C212B2900DA492B /* IXMCategoryFilter.m */; };
+		F575C95A1C3502E200DA0DC8 /* IXMCountryCode.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002991C212B2900DA492B /* IXMCountryCode.m */; };
+		F575C95B1C3502E500DA0DC8 /* IXMDisplayCategoryFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0029B1C212B2900DA492B /* IXMDisplayCategoryFilter.m */; };
+		F575C95C1C3502E700DA0DC8 /* IXMFilterObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0029D1C212B2900DA492B /* IXMFilterObjects.m */; };
+		F575C95D1C3502EB00DA0DC8 /* IXMFreshness.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0029F1C212B2900DA492B /* IXMFreshness.m */; };
+		F575C95E1C3502EE00DA0DC8 /* IXMPriceAggregator.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002A11C212B2900DA492B /* IXMPriceAggregator.m */; };
+		F575C95F1C3502F100DA0DC8 /* IXMProductDescriptionAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002A31C212B2900DA492B /* IXMProductDescriptionAttributes.m */; };
+		F575C9601C3502F300DA0DC8 /* IXMProductDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002A51C212B2900DA492B /* IXMProductDetail.m */; };
+		F575C9611C3502F600DA0DC8 /* IXMProductPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002A71C212B2900DA492B /* IXMProductPrice.m */; };
+		F575C9621C3502F800DA0DC8 /* IXMRecentSearchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002A91C212B2900DA492B /* IXMRecentSearchItem.m */; };
+		F575C9631C3502FC00DA0DC8 /* IXMSearchType.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002AB1C212B2900DA492B /* IXMSearchType.m */; };
+		F575C9641C3502FF00DA0DC8 /* IXMSelectedFilters.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002AD1C212B2900DA492B /* IXMSelectedFilters.m */; };
+		F575C9651C35030100DA0DC8 /* IXMSortType.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002AF1C212B2900DA492B /* IXMSortType.m */; };
+		F575C9661C35030400DA0DC8 /* IXMStoreFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002B11C212B2900DA492B /* IXMStoreFilter.m */; };
+		F575C9671C35030600DA0DC8 /* IXProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002B31C212B2900DA492B /* IXProduct.m */; };
+		F575C9681C35030800DA0DC8 /* IXMSavedProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = F5712CAA1C32A8AF00526585 /* IXMSavedProduct.m */; };
+		F575C96A1C35031E00DA0DC8 /* 782-compass.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002B81C212B2900DA492B /* 782-compass.png */; };
+		F575C96B1C35032100DA0DC8 /* 782-compass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002B91C212B2900DA492B /* 782-compass@2x.png */; };
+		F575C96C1C35032700DA0DC8 /* backicon.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002BA1C212B2900DA492B /* backicon.png */; };
+		F575C96D1C35032700DA0DC8 /* backicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002BB1C212B2900DA492B /* backicon@2x.png */; };
+		F575C96E1C35032700DA0DC8 /* backicon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002BC1C212B2900DA492B /* backicon@3x.png */; };
+		F575C96F1C35032700DA0DC8 /* barcode_scanner.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002BD1C212B2900DA492B /* barcode_scanner.png */; };
+		F575C9701C35032700DA0DC8 /* barcode_scanner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002BE1C212B2900DA492B /* barcode_scanner@2x.png */; };
+		F575C9711C35032700DA0DC8 /* drop_down_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002BF1C212B2900DA492B /* drop_down_icon.png */; };
+		F575C9721C35032700DA0DC8 /* drop_down_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002C01C212B2900DA492B /* drop_down_icon@2x.png */; };
+		F575C9731C35032700DA0DC8 /* drop_down_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002C11C212B2900DA492B /* drop_down_icon@3x.png */; };
+		F575C9741C35032700DA0DC8 /* icon-default-picture.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002C21C212B2900DA492B /* icon-default-picture.png */; };
+		F575C9751C35032700DA0DC8 /* icon-default-picture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002C31C212B2900DA492B /* icon-default-picture@2x.png */; };
+		F575C9761C35032700DA0DC8 /* icon-default-picture@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002C41C212B2900DA492B /* icon-default-picture@3x.png */; };
+		F575C9771C35032700DA0DC8 /* icon_favorite_refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002C51C212B2900DA492B /* icon_favorite_refresh.png */; };
+		F575C9781C35032700DA0DC8 /* icon_favorite_refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002C61C212B2900DA492B /* icon_favorite_refresh@2x.png */; };
+		F575C9791C35032700DA0DC8 /* icon_favorite_refresh@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002C71C212B2900DA492B /* icon_favorite_refresh@3x.png */; };
+		F575C97A1C35032700DA0DC8 /* icon_type_filter_option.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002C81C212B2900DA492B /* icon_type_filter_option.png */; };
+		F575C97B1C35032700DA0DC8 /* icon_type_filter_option@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002C91C212B2900DA492B /* icon_type_filter_option@2x.png */; };
+		F575C97C1C35032700DA0DC8 /* icon_type_filter_option@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002CA1C212B2900DA492B /* icon_type_filter_option@3x.png */; };
+		F575C97D1C35032700DA0DC8 /* icon_type_grid.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002CB1C212B2900DA492B /* icon_type_grid.png */; };
+		F575C97E1C35032700DA0DC8 /* icon_type_grid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002CC1C212B2900DA492B /* icon_type_grid@2x.png */; };
+		F575C97F1C35032700DA0DC8 /* icon_type_grid@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002CD1C212B2900DA492B /* icon_type_grid@3x.png */; };
+		F575C9801C35032700DA0DC8 /* icon_type_list.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002CE1C212B2900DA492B /* icon_type_list.png */; };
+		F575C9811C35032700DA0DC8 /* icon_type_list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002CF1C212B2900DA492B /* icon_type_list@2x.png */; };
+		F575C9821C35032700DA0DC8 /* icon_type_list@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002D01C212B2900DA492B /* icon_type_list@3x.png */; };
+		F575C9831C35032700DA0DC8 /* icon_type_sort.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002D11C212B2900DA492B /* icon_type_sort.png */; };
+		F575C9841C35032700DA0DC8 /* icon_type_sort@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002D21C212B2900DA492B /* icon_type_sort@2x.png */; };
+		F575C9851C35032700DA0DC8 /* icon_type_sort@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002D31C212B2900DA492B /* icon_type_sort@3x.png */; };
+		F575C9861C35032700DA0DC8 /* menu_alert.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002D41C212B2900DA492B /* menu_alert.png */; };
+		F575C9871C35032700DA0DC8 /* menu_alert@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002D51C212B2900DA492B /* menu_alert@2x.png */; };
+		F575C9881C35032700DA0DC8 /* menu_alert@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002D61C212B2900DA492B /* menu_alert@3x.png */; };
+		F575C9891C35032700DA0DC8 /* menu_home.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002D71C212B2900DA492B /* menu_home.png */; };
+		F575C98A1C35032700DA0DC8 /* menu_home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002D81C212B2900DA492B /* menu_home@2x.png */; };
+		F575C98B1C35032700DA0DC8 /* menu_home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002D91C212B2900DA492B /* menu_home@3x.png */; };
+		F575C98C1C35032700DA0DC8 /* menu_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002DA1C212B2900DA492B /* menu_settings.png */; };
+		F575C98D1C35032700DA0DC8 /* menu_settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002DB1C212B2900DA492B /* menu_settings@2x.png */; };
+		F575C98E1C35032700DA0DC8 /* menu_settings@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002DC1C212B2900DA492B /* menu_settings@3x.png */; };
+		F575C98F1C35032700DA0DC8 /* navigationbar_title_dropmenu_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002DD1C212B2900DA492B /* navigationbar_title_dropmenu_icon@2x.png */; };
+		F575C9901C35032700DA0DC8 /* product_search_header.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002DE1C212B2900DA492B /* product_search_header.png */; };
+		F575C9911C35032700DA0DC8 /* search_bar_code.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002DF1C212B2900DA492B /* search_bar_code.png */; };
+		F575C9921C35032700DA0DC8 /* search_bar_code@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002E01C212B2900DA492B /* search_bar_code@2x.png */; };
+		F575C9931C35032700DA0DC8 /* search_bar_code@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002E11C212B2900DA492B /* search_bar_code@3x.png */; };
+		F575C9941C35032700DA0DC8 /* search_magnifying_glass_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002E21C212B2900DA492B /* search_magnifying_glass_icon.png */; };
+		F575C9951C35032700DA0DC8 /* search_magnifying_glass_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002E31C212B2900DA492B /* search_magnifying_glass_icon@2x.png */; };
+		F575C9961C35032700DA0DC8 /* search_magnifying_glass_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002E41C212B2900DA492B /* search_magnifying_glass_icon@3x.png */; };
+		F575C9971C35032700DA0DC8 /* suprise_me_bezzle.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002E51C212B2900DA492B /* suprise_me_bezzle.png */; };
+		F575C9981C35033700DA0DC8 /* IXRPriceTypeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002E81C212B2900DA492B /* IXRPriceTypeUtils.m */; };
+		F575C9991C35033A00DA0DC8 /* IXRUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002EA1C212B2900DA492B /* IXRUtils.m */; };
+		F575C99B1C35033F00DA0DC8 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002EE1C212B2900DA492B /* NSString+URLEncoding.m */; };
+		F575C99C1C35034200DA0DC8 /* UIColor+Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002F01C212B2900DA492B /* UIColor+Extended.m */; };
+		F575C99D1C35034500DA0DC8 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002F21C212B2900DA492B /* UIImageEffects.m */; };
+		F575C99E1C35055600DA0DC8 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = F565D9C81C203E2600297959 /* config.plist */; };
+		F575C99F1C35055A00DA0DC8 /* local_config.plist in Resources */ = {isa = PBXBuildFile; fileRef = F565D9CC1C2040C000297959 /* local_config.plist */; };
 		F5C3370B1C2034E700E4D3B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C3370A1C2034E700E4D3B1 /* main.m */; };
 		F5C3370E1C2034E700E4D3B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C3370D1C2034E700E4D3B1 /* AppDelegate.m */; };
 		F5C337111C2034E700E4D3B1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C337101C2034E700E4D3B1 /* ViewController.m */; };
@@ -123,6 +216,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F5712C941C32A56B00526585 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5C336FE1C2034E700E4D3B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5712C8A1C32A56A00526585;
+			remoteInfo = Search;
+		};
 		F5C337201C2034E700E4D3B1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F5C336FE1C2034E700E4D3B1 /* Project object */;
@@ -139,10 +239,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F5712C9A1C32A56B00526585 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F5712C961C32A56B00526585 /* SearchWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		083B26631DE524D7A3C28411 /* Pods-SearchWidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchWidget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SearchWidget/Pods-SearchWidget.debug.xcconfig"; sourceTree = "<group>"; };
 		2A1A86727BDDE7CA0626D7FD /* Pods-ProductHuntrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductHuntrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductHuntrUITests/Pods-ProductHuntrUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		300AF2EC35817D84710B239E /* libPods-ProductHuntrUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProductHuntrUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FCE847C2784A683829ADC1 /* Pods-ProductHuntrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductHuntrTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductHuntrTests/Pods-ProductHuntrTests.debug.xcconfig"; sourceTree = "<group>"; };
+		483EBFCF620D535942CA44FB /* libPods-SearchWidget.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SearchWidget.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C2124CD58D05B930CA49F5 /* Pods-ProductHuntrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductHuntrUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProductHuntrUITests/Pods-ProductHuntrUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B0513BF9437B9CAF4F103EFE /* libPods-ProductHuntrTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProductHuntrTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF969E238CB53D4805E38652 /* Pods-ProductHuntrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductHuntrTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProductHuntrTests/Pods-ProductHuntrTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +270,18 @@
 		F565D9C21C203B4500297959 /* home_background_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_background_image.png; path = ProductHuntr/home_background_image.png; sourceTree = SOURCE_ROOT; };
 		F565D9C81C203E2600297959 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		F565D9CC1C2040C000297959 /* local_config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = local_config.plist; sourceTree = "<group>"; };
+		F5712C8B1C32A56A00526585 /* SearchWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SearchWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5712C931C32A56B00526585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5712C9C1C32A6DB00526585 /* IXWSearchProductResultsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IXWSearchProductResultsCell.xib; path = Widget/IXWSearchProductResultsCell.xib; sourceTree = "<group>"; };
+		F5712C9D1C32A6DB00526585 /* WidgetInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = WidgetInterface.storyboard; path = Widget/WidgetInterface.storyboard; sourceTree = "<group>"; };
+		F5712CA01C32A70300526585 /* InitialShareTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialShareTableViewController.h; path = Widget/InitialShareTableViewController.h; sourceTree = "<group>"; };
+		F5712CA11C32A70300526585 /* InitialShareTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialShareTableViewController.m; path = Widget/InitialShareTableViewController.m; sourceTree = "<group>"; };
+		F5712CA21C32A70300526585 /* IXWSearchProductResultsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IXWSearchProductResultsCell.h; path = Widget/IXWSearchProductResultsCell.h; sourceTree = "<group>"; };
+		F5712CA31C32A70300526585 /* IXWSearchProductResultsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IXWSearchProductResultsCell.m; path = Widget/IXWSearchProductResultsCell.m; sourceTree = "<group>"; };
+		F5712CA41C32A70300526585 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareViewController.h; path = Widget/ShareViewController.h; sourceTree = "<group>"; };
+		F5712CA51C32A70300526585 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareViewController.m; path = Widget/ShareViewController.m; sourceTree = "<group>"; };
+		F5712CA91C32A8AF00526585 /* IXMSavedProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXMSavedProduct.h; sourceTree = "<group>"; };
+		F5712CAA1C32A8AF00526585 /* IXMSavedProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXMSavedProduct.m; sourceTree = "<group>"; };
 		F5C337061C2034E700E4D3B1 /* ProductHuntr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductHuntr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C3370A1C2034E700E4D3B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5C3370C1C2034E700E4D3B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -315,9 +443,18 @@
 		F5D0031A1C212B2900DA492B /* PBSafariActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSafariActivity.m; sourceTree = "<group>"; };
 		F5D0038A1C212D8000DA492B /* IXProductResultsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IXProductResultsTableViewCell.xib; sourceTree = "<group>"; };
 		F5D0038E1C21582C00DA492B /* IndixRetailers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndixRetailers.h; sourceTree = "<group>"; };
+		FD5F8BE763A093FA92ECD82F /* Pods-SearchWidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchWidget.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchWidget/Pods-SearchWidget.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F5712C881C32A56A00526585 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				616677D11D5A5EBCEC0D534D /* libPods-SearchWidget.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5C337031C2034E700E4D3B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,6 +491,8 @@
 				BF969E238CB53D4805E38652 /* Pods-ProductHuntrTests.release.xcconfig */,
 				2A1A86727BDDE7CA0626D7FD /* Pods-ProductHuntrUITests.debug.xcconfig */,
 				A2C2124CD58D05B930CA49F5 /* Pods-ProductHuntrUITests.release.xcconfig */,
+				083B26631DE524D7A3C28411 /* Pods-SearchWidget.debug.xcconfig */,
+				FD5F8BE763A093FA92ECD82F /* Pods-SearchWidget.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -364,16 +503,43 @@
 				D6FB6D3F9B40667041F131B6 /* libPods-ProductHuntr.a */,
 				B0513BF9437B9CAF4F103EFE /* libPods-ProductHuntrTests.a */,
 				300AF2EC35817D84710B239E /* libPods-ProductHuntrUITests.a */,
+				483EBFCF620D535942CA44FB /* libPods-SearchWidget.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5712C8C1C32A56A00526585 /* SearchWidget */ = {
+			isa = PBXGroup;
+			children = (
+				F5712C931C32A56B00526585 /* Info.plist */,
+			);
+			name = SearchWidget;
+			path = Search;
+			sourceTree = "<group>";
+		};
+		F5712C9B1C32A67C00526585 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				F5712CA01C32A70300526585 /* InitialShareTableViewController.h */,
+				F5712CA11C32A70300526585 /* InitialShareTableViewController.m */,
+				F5712CA21C32A70300526585 /* IXWSearchProductResultsCell.h */,
+				F5712CA31C32A70300526585 /* IXWSearchProductResultsCell.m */,
+				F5712CA41C32A70300526585 /* ShareViewController.h */,
+				F5712CA51C32A70300526585 /* ShareViewController.m */,
+				F5712C9C1C32A6DB00526585 /* IXWSearchProductResultsCell.xib */,
+				F5712C9D1C32A6DB00526585 /* WidgetInterface.storyboard */,
+			);
+			name = Widget;
 			sourceTree = "<group>";
 		};
 		F5C336FD1C2034E700E4D3B1 = {
 			isa = PBXGroup;
 			children = (
+				F5D0027A1C212B2900DA492B /* IndixRetailers */,
 				F5C337081C2034E700E4D3B1 /* ProductHuntr */,
 				F5C337221C2034E700E4D3B1 /* ProductHuntrTests */,
 				F5C3372D1C2034E800E4D3B1 /* ProductHuntrUITests */,
+				F5712C8C1C32A56A00526585 /* SearchWidget */,
 				F5C337071C2034E700E4D3B1 /* Products */,
 				0BC4AB5F8DC8463845D84D55 /* Pods */,
 				6EE2D1FE26F06D9EEF562EA5 /* Frameworks */,
@@ -386,6 +552,7 @@
 				F5C337061C2034E700E4D3B1 /* ProductHuntr.app */,
 				F5C3371F1C2034E700E4D3B1 /* ProductHuntrTests.xctest */,
 				F5C3372A1C2034E700E4D3B1 /* ProductHuntrUITests.xctest */,
+				F5712C8B1C32A56A00526585 /* SearchWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -398,7 +565,6 @@
 				F565D9C01C203B4500297959 /* home_app_name.png */,
 				F565D9C11C203B4500297959 /* list_titlebar_bg.png */,
 				F565D9C21C203B4500297959 /* home_background_image.png */,
-				F5D0027A1C212B2900DA492B /* IndixRetailers */,
 				F5C3370C1C2034E700E4D3B1 /* AppDelegate.h */,
 				F5C3370D1C2034E700E4D3B1 /* AppDelegate.m */,
 				F5C3370F1C2034E700E4D3B1 /* ViewController.h */,
@@ -441,6 +607,7 @@
 		F5D0027A1C212B2900DA492B /* IndixRetailers */ = {
 			isa = PBXGroup;
 			children = (
+				F5712C9B1C32A67C00526585 /* Widget */,
 				F5D0027B1C212B2900DA492B /* Core */,
 				F5D0028E1C212B2900DA492B /* IndixRetailer.storyboard */,
 				F5D0028F1C212B2900DA492B /* Models */,
@@ -450,7 +617,8 @@
 				F5D0030B1C212B2900DA492B /* Views */,
 				F5D0038E1C21582C00DA492B /* IndixRetailers.h */,
 			);
-			path = IndixRetailers;
+			name = IndixRetailers;
+			path = ProductHuntr/IndixRetailers;
 			sourceTree = "<group>";
 		};
 		F5D0027B1C212B2900DA492B /* Core */ = {
@@ -515,6 +683,8 @@
 				F5D002B11C212B2900DA492B /* IXMStoreFilter.m */,
 				F5D002B21C212B2900DA492B /* IXProduct.h */,
 				F5D002B31C212B2900DA492B /* IXProduct.m */,
+				F5712CA91C32A8AF00526585 /* IXMSavedProduct.h */,
+				F5712CAA1C32A8AF00526585 /* IXMSavedProduct.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -649,6 +819,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F5712C8A1C32A56A00526585 /* SearchWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5712C971C32A56B00526585 /* Build configuration list for PBXNativeTarget "SearchWidget" */;
+			buildPhases = (
+				7DC7A8DADA530B0C0EAFFDCF /* Check Pods Manifest.lock */,
+				F5712C871C32A56A00526585 /* Sources */,
+				F5712C881C32A56A00526585 /* Frameworks */,
+				F5712C891C32A56A00526585 /* Resources */,
+				D2A1AE06ACE3FA0F0A9FAE05 /* Embed Pods Frameworks */,
+				0AF52E39A82D4881DA516E18 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SearchWidget;
+			productName = Search;
+			productReference = F5712C8B1C32A56A00526585 /* SearchWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		F5C337051C2034E700E4D3B1 /* ProductHuntr */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5C337331C2034E800E4D3B1 /* Build configuration list for PBXNativeTarget "ProductHuntr" */;
@@ -659,10 +849,12 @@
 				F5C337041C2034E700E4D3B1 /* Resources */,
 				CEF99D9CD4CC736C2A218655 /* Embed Pods Frameworks */,
 				9A5728C5A7F6819A5F58908C /* Copy Pods Resources */,
+				F5712C9A1C32A56B00526585 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F5712C951C32A56B00526585 /* PBXTargetDependency */,
 			);
 			name = ProductHuntr;
 			productName = ProductHuntr;
@@ -719,6 +911,9 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Indix;
 				TargetAttributes = {
+					F5712C8A1C32A56A00526585 = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					F5C337051C2034E700E4D3B1 = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
@@ -748,11 +943,69 @@
 				F5C337051C2034E700E4D3B1 /* ProductHuntr */,
 				F5C3371E1C2034E700E4D3B1 /* ProductHuntrTests */,
 				F5C337291C2034E700E4D3B1 /* ProductHuntrUITests */,
+				F5712C8A1C32A56A00526585 /* SearchWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F5712C891C32A56A00526585 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F575C9791C35032700DA0DC8 /* icon_favorite_refresh@3x.png in Resources */,
+				F575C9901C35032700DA0DC8 /* product_search_header.png in Resources */,
+				F575C96C1C35032700DA0DC8 /* backicon.png in Resources */,
+				F575C9841C35032700DA0DC8 /* icon_type_sort@2x.png in Resources */,
+				F575C9831C35032700DA0DC8 /* icon_type_sort.png in Resources */,
+				F575C98F1C35032700DA0DC8 /* navigationbar_title_dropmenu_icon@2x.png in Resources */,
+				F575C9911C35032700DA0DC8 /* search_bar_code.png in Resources */,
+				F575C9861C35032700DA0DC8 /* menu_alert.png in Resources */,
+				F575C98C1C35032700DA0DC8 /* menu_settings.png in Resources */,
+				F575C9821C35032700DA0DC8 /* icon_type_list@3x.png in Resources */,
+				F575C97D1C35032700DA0DC8 /* icon_type_grid.png in Resources */,
+				F575C94B1C35026300DA0DC8 /* IXWSearchProductResultsCell.xib in Resources */,
+				F575C9931C35032700DA0DC8 /* search_bar_code@3x.png in Resources */,
+				F575C9771C35032700DA0DC8 /* icon_favorite_refresh.png in Resources */,
+				F575C98A1C35032700DA0DC8 /* menu_home@2x.png in Resources */,
+				F575C96D1C35032700DA0DC8 /* backicon@2x.png in Resources */,
+				F575C9721C35032700DA0DC8 /* drop_down_icon@2x.png in Resources */,
+				F575C9801C35032700DA0DC8 /* icon_type_list.png in Resources */,
+				F575C9751C35032700DA0DC8 /* icon-default-picture@2x.png in Resources */,
+				F575C9921C35032700DA0DC8 /* search_bar_code@2x.png in Resources */,
+				F575C9711C35032700DA0DC8 /* drop_down_icon.png in Resources */,
+				F575C99E1C35055600DA0DC8 /* config.plist in Resources */,
+				F575C99F1C35055A00DA0DC8 /* local_config.plist in Resources */,
+				F575C9701C35032700DA0DC8 /* barcode_scanner@2x.png in Resources */,
+				F575C9851C35032700DA0DC8 /* icon_type_sort@3x.png in Resources */,
+				F575C96A1C35031E00DA0DC8 /* 782-compass.png in Resources */,
+				F575C97B1C35032700DA0DC8 /* icon_type_filter_option@2x.png in Resources */,
+				F575C98B1C35032700DA0DC8 /* menu_home@3x.png in Resources */,
+				F575C96E1C35032700DA0DC8 /* backicon@3x.png in Resources */,
+				F575C98E1C35032700DA0DC8 /* menu_settings@3x.png in Resources */,
+				F575C9891C35032700DA0DC8 /* menu_home.png in Resources */,
+				F575C9741C35032700DA0DC8 /* icon-default-picture.png in Resources */,
+				F575C94D1C35026D00DA0DC8 /* WidgetInterface.storyboard in Resources */,
+				F575C97C1C35032700DA0DC8 /* icon_type_filter_option@3x.png in Resources */,
+				F575C9781C35032700DA0DC8 /* icon_favorite_refresh@2x.png in Resources */,
+				F575C96B1C35032100DA0DC8 /* 782-compass@2x.png in Resources */,
+				F575C97F1C35032700DA0DC8 /* icon_type_grid@3x.png in Resources */,
+				F575C96F1C35032700DA0DC8 /* barcode_scanner.png in Resources */,
+				F575C98D1C35032700DA0DC8 /* menu_settings@2x.png in Resources */,
+				F575C9961C35032700DA0DC8 /* search_magnifying_glass_icon@3x.png in Resources */,
+				F575C9871C35032700DA0DC8 /* menu_alert@2x.png in Resources */,
+				F575C97A1C35032700DA0DC8 /* icon_type_filter_option.png in Resources */,
+				F575C9761C35032700DA0DC8 /* icon-default-picture@3x.png in Resources */,
+				F575C97E1C35032700DA0DC8 /* icon_type_grid@2x.png in Resources */,
+				F575C9881C35032700DA0DC8 /* menu_alert@3x.png in Resources */,
+				F575C9731C35032700DA0DC8 /* drop_down_icon@3x.png in Resources */,
+				F575C9811C35032700DA0DC8 /* icon_type_list@2x.png in Resources */,
+				F575C9941C35032700DA0DC8 /* search_magnifying_glass_icon.png in Resources */,
+				F575C9951C35032700DA0DC8 /* search_magnifying_glass_icon@2x.png in Resources */,
+				F575C9971C35032700DA0DC8 /* suprise_me_bezzle.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5C337041C2034E700E4D3B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -791,9 +1044,11 @@
 				F5D003631C212B2900DA492B /* product_search_header.png in Resources */,
 				F5D003461C212B2900DA492B /* drop_down_icon@3x.png in Resources */,
 				F5D0034B1C212B2900DA492B /* icon_favorite_refresh@2x.png in Resources */,
+				F5712C9F1C32A6DB00526585 /* WidgetInterface.storyboard in Resources */,
 				F5D003541C212B2900DA492B /* icon_type_list@2x.png in Resources */,
 				F5D003411C212B2900DA492B /* backicon@3x.png in Resources */,
 				F5D003571C212B2900DA492B /* icon_type_sort@2x.png in Resources */,
+				F5712C9E1C32A6DB00526585 /* IXWSearchProductResultsCell.xib in Resources */,
 				F5D003561C212B2900DA492B /* icon_type_sort.png in Resources */,
 				F5D003431C212B2900DA492B /* barcode_scanner@2x.png in Resources */,
 				F5D0034C1C212B2900DA492B /* icon_favorite_refresh@3x.png in Resources */,
@@ -833,6 +1088,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0AF52E39A82D4881DA516E18 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SearchWidget/Pods-SearchWidget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1E112376CAAE3F777944452A /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -849,6 +1119,21 @@
 			showEnvVarsInLog = 0;
 		};
 		236F9E6841DCFC82D571B907 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7DC7A8DADA530B0C0EAFFDCF /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -923,6 +1208,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProductHuntr/Pods-ProductHuntr-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D2A1AE06ACE3FA0F0A9FAE05 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SearchWidget/Pods-SearchWidget-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DB080A1E39BB41C372BC4C6D /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -956,6 +1256,48 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F5712C871C32A56A00526585 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F575C9511C3502C100DA0DC8 /* IXApiV2Core.m in Sources */,
+				F575C9501C3502BE00DA0DC8 /* IXApiCore.m in Sources */,
+				F575C95F1C3502F100DA0DC8 /* IXMProductDescriptionAttributes.m in Sources */,
+				F575C9631C3502FC00DA0DC8 /* IXMSearchType.m in Sources */,
+				F575C95B1C3502E500DA0DC8 /* IXMDisplayCategoryFilter.m in Sources */,
+				F575C9621C3502F800DA0DC8 /* IXMRecentSearchItem.m in Sources */,
+				F575C95C1C3502E700DA0DC8 /* IXMFilterObjects.m in Sources */,
+				F575C9551C3502CF00DA0DC8 /* IXRTheme.m in Sources */,
+				F575C9481C35025100DA0DC8 /* InitialShareTableViewController.m in Sources */,
+				F575C9991C35033A00DA0DC8 /* IXRUtils.m in Sources */,
+				F575C9581C3502DB00DA0DC8 /* IXMBrandFilter.m in Sources */,
+				F575C95E1C3502EE00DA0DC8 /* IXMPriceAggregator.m in Sources */,
+				F575C9601C3502F300DA0DC8 /* IXMProductDetail.m in Sources */,
+				F575C99C1C35034200DA0DC8 /* UIColor+Extended.m in Sources */,
+				F575C95D1C3502EB00DA0DC8 /* IXMFreshness.m in Sources */,
+				F575C9521C3502C400DA0DC8 /* IXRApiParser.m in Sources */,
+				F575C9681C35030800DA0DC8 /* IXMSavedProduct.m in Sources */,
+				F575C9491C35025800DA0DC8 /* IXWSearchProductResultsCell.m in Sources */,
+				F575C94F1C3502BA00DA0DC8 /* BarCode.m in Sources */,
+				F575C9981C35033700DA0DC8 /* IXRPriceTypeUtils.m in Sources */,
+				F575C95A1C3502E200DA0DC8 /* IXMCountryCode.m in Sources */,
+				F575C9671C35030600DA0DC8 /* IXProduct.m in Sources */,
+				F575C9641C3502FF00DA0DC8 /* IXMSelectedFilters.m in Sources */,
+				F575C94E1C3502AD00DA0DC8 /* IXRetailerHelper.m in Sources */,
+				F575C9541C3502C900DA0DC8 /* IXRCoreInitializer.m in Sources */,
+				F575C94A1C35025B00DA0DC8 /* ShareViewController.m in Sources */,
+				F575C9611C3502F600DA0DC8 /* IXMProductPrice.m in Sources */,
+				F575C9561C3502D100DA0DC8 /* IXRViewControllerHelper.m in Sources */,
+				F575C9531C3502C600DA0DC8 /* IXRApiV2Parser.m in Sources */,
+				F575C9661C35030400DA0DC8 /* IXMStoreFilter.m in Sources */,
+				F575C9571C3502D600DA0DC8 /* IXSearchSuggestionHelper.m in Sources */,
+				F575C99D1C35034500DA0DC8 /* UIImageEffects.m in Sources */,
+				F575C9651C35030100DA0DC8 /* IXMSortType.m in Sources */,
+				F575C99B1C35033F00DA0DC8 /* NSString+URLEncoding.m in Sources */,
+				F575C9591C3502DF00DA0DC8 /* IXMCategoryFilter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5C337021C2034E700E4D3B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -973,6 +1315,7 @@
 				F5C3370E1C2034E700E4D3B1 /* AppDelegate.m in Sources */,
 				F5D0036B1C212B2900DA492B /* IXRPriceTypeUtils.m in Sources */,
 				F5D003741C212B2900DA492B /* IXRCatalogViewController.m in Sources */,
+				F5712CA81C32A70300526585 /* ShareViewController.m in Sources */,
 				F5D0036C1C212B2900DA492B /* IXRUtils.m in Sources */,
 				F5D003781C212B2900DA492B /* IXRSelectChoiceViewController.m in Sources */,
 				F5D003251C212B2900DA492B /* IXRetailerHelper.m in Sources */,
@@ -991,11 +1334,13 @@
 				F5D003311C212B2900DA492B /* IXMFreshness.m in Sources */,
 				F5D0036F1C212B2900DA492B /* UIColor+Extended.m in Sources */,
 				F5D0037B1C212B2900DA492B /* IXScannerViewController.m in Sources */,
+				F5712CA61C32A70300526585 /* InitialShareTableViewController.m in Sources */,
 				F5D0037C1C212B2900DA492B /* IXImageUrlView.m in Sources */,
 				F5D003821C212B2900DA492B /* IXRSearchSuggestionTableView.m in Sources */,
 				F5D0032F1C212B2900DA492B /* IXMDisplayCategoryFilter.m in Sources */,
 				F5D0038F1C21582C00DA492B /* IndixRetailers.h in Sources */,
 				F5C3370B1C2034E700E4D3B1 /* main.m in Sources */,
+				F5712CAB1C32A8AF00526585 /* IXMSavedProduct.m in Sources */,
 				F5D003221C212B2900DA492B /* IXRApiParser.m in Sources */,
 				F5D0037D1C212B2900DA492B /* IXMCategoryFilterViewTableViewCell.m in Sources */,
 				F5D003241C212B2900DA492B /* IXRCoreInitializer.m in Sources */,
@@ -1008,6 +1353,7 @@
 				F5D003751C212B2900DA492B /* IXRProductFilterViewController.m in Sources */,
 				F5D003771C212B2900DA492B /* IXRSearchDisplayViewController.m in Sources */,
 				F5D003331C212B2900DA492B /* IXMProductDescriptionAttributes.m in Sources */,
+				F5712CA71C32A70300526585 /* IXWSearchProductResultsCell.m in Sources */,
 				F5D003261C212B2900DA492B /* IXRTheme.m in Sources */,
 				F5D0032A1C212B2900DA492B /* BarCode.m in Sources */,
 				F5D003351C212B2900DA492B /* IXMProductPrice.m in Sources */,
@@ -1034,6 +1380,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F5712C951C32A56B00526585 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5712C8A1C32A56A00526585 /* SearchWidget */;
+			targetProxy = F5712C941C32A56B00526585 /* PBXContainerItemProxy */;
+		};
 		F5C337211C2034E700E4D3B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F5C337051C2034E700E4D3B1 /* ProductHuntr */;
@@ -1066,6 +1417,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F5712C981C32A56B00526585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 083B26631DE524D7A3C28411 /* Pods-SearchWidget.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = Search/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.indix.opensource.ProductHuntr.Search;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F5712C991C32A56B00526585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD5F8BE763A093FA92ECD82F /* Pods-SearchWidget.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = Search/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.indix.opensource.ProductHuntr.Search;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		F5C337311C2034E800E4D3B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1225,6 +1602,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F5712C971C32A56B00526585 /* Build configuration list for PBXNativeTarget "SearchWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5712C981C32A56B00526585 /* Debug */,
+				F5712C991C32A56B00526585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F5C337011C2034E700E4D3B1 /* Build configuration list for PBXProject "ProductHuntr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

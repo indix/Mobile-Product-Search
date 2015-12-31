@@ -25,6 +25,6 @@ static inline BOOL IXDeviceOrientationPortrait(UIDeviceOrientation orientation) 
 + (CGSize)findHeightForAttributedText:(NSAttributedString *)text havingWidth:(CGFloat)widthValue andFont:(UIFont *)font;
 
 + (NSString *)getCategoryImage:(NSString *)categoryId;
-
++ (NSString *)extractUrlFromShareText:(NSString *)shareText;
 
 @end
