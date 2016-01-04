@@ -10,6 +10,7 @@
 #import "IXProduct.h"
 #import "IXMProductDetail.h"
 #import "IXMProductPrice.h"
+#import "IXMSavedProduct.h"
 
 
 @interface IXRCatalogViewController : UIViewController
@@ -33,8 +34,14 @@
 @property (nonatomic, assign) NSInteger totalPriceOfferCount;
 @property (nonatomic, assign) NSInteger pricePageNumber;
 
-- (void)addPricesFromArray:(NSArray *)productprices forPage:(NSInteger)page;
 
+@property (nonatomic, strong) IXMSavedProduct *savedProductDetails;
+@property (nonatomic, assign) BOOL isRefreshingFavoritesDetails;
+@property (nonatomic, assign, readonly) BOOL isSavedToFavorites;
+
+
+- (void)addPricesFromArray:(NSArray *)productprices forPage:(NSInteger)page;
+- (void)changeFavoritesState;
 - (void)switchSegmentToPrice;
 
 @end

@@ -129,9 +129,19 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"productTitleCell"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         UIButton *priceLabel = (UIButton *)[cell viewWithTag:12];
+        UIButton *favorites = (UIButton *)[cell viewWithTag:13];
         UIButton *storesLabel = (UIButton *)[cell viewWithTag:14];
+        [favorites addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(favoriteButtonTapped:)]];
         [priceLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(priceButtonTapped:)]];
         [storesLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(storeButtonTapped:)]];
+        
+        [favorites setEnabled:!self.isDoingFavouriting];
+        if (self.isAddedtoFavorites) {
+            [favorites setTitle:@"Remove from favorites" forState:UIControlStateNormal];
+        }
+        else {
+            [favorites setTitle:@"Add to favorites" forState:UIControlStateNormal];
+        }
         
         NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
         [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:[self productOffers] attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:DEFAULT_FONT_HEIGHT], NSForegroundColorAttributeName:[UIColor colorWithRed:198.0/255.0 green:40.0/255.0 blue:40.0/255.0 alpha:1.0]}]];
@@ -213,6 +223,12 @@
 
 
 #pragma mark - Utilities
+
+- (void)favoriteButtonTapped:(UIButton *)button
+{
+    // Add/Remove from favorites
+    [self doToggleFavoritesOption];
+}
 
 - (void)priceButtonTapped:(id)sender {
     [self doShowAllPrices];

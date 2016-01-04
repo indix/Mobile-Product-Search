@@ -9,6 +9,7 @@
 #import "IXRCatalogViewController.h"
 #import "IXRCatalogParentImplViewController.h"
 #import "IXRetailerHelper.h"
+#import "IXMDatabaseManager.h"
 
 @interface IXRCatalogViewController () {
     IXRCatalogParentImplViewController<IXRCatalogParentImplViewControllerDelegate> *selectedSegmentViewController;
@@ -21,6 +22,9 @@
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (nonatomic, strong) UISegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
+@property (readwrite, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) IXMDatabaseManager *databaseManager;
 
 @end
 
@@ -44,11 +48,15 @@
     selectedChildAtIndex = 0;
     segmentContentView = [self containerView];
     
+    self.databaseManager = [IXMDatabaseManager sharedManager];
+    self.managedObjectContext = [self.databaseManager createManagedObjectContextWithConcurrencyType:NSMainQueueConcurrencyType];
+    
     if (self.product) {
         self.activityIndicator.hidden = YES;
         [self setUpSegmentControl];
         
         // fetch description and keep it inform to child view controllers;
+        [self refreshFavoritesOption];
         [self performDetailProductDetailFetch];
     }
     else {
@@ -153,6 +161,54 @@
     return vc;
 }
 
+- (void)refreshFavoritesOption {
+    if (self.product) {
+        self.isRefreshingFavoritesDetails = YES;
+        IXMSavedProduct* prod = [self.self.databaseManager requestCheckIfAddedToFavorites:self.product forManagedContext:self.managedObjectContext];
+        if (prod) {
+            self.savedProductDetails = prod;
+        }
+        self.isRefreshingFavoritesDetails = NO;
+    }
+}
+
+// Don't call this if isRefreshingFavoritesDetails is true
+- (BOOL)isSavedToFavorites {
+    return self.savedProductDetails != nil;
+}
+
+- (void)changeFavoritesState {
+    
+    if (self.isRefreshingFavoritesDetails) {
+        NSLog(@"ERROR!! Calling change in favorites while the old not completed yet");
+        return;
+    }
+    
+    self.isRefreshingFavoritesDetails = YES;
+    [self informStartingFavouritesChange];
+    if ([self isSavedToFavorites]) {
+        [self.databaseManager requestRemoveFromFavorites:self.savedProductDetails forManagedContext:self.managedObjectContext success:^{
+            self.isRefreshingFavoritesDetails = NO;
+            self.savedProductDetails = nil;
+            [self informFavouritesChangeFinished:YES];
+        } failure:^(NSError *error) {
+            self.isRefreshingFavoritesDetails = NO;
+            [self informFavouritesChangeFinished:NO];
+        }];
+    }
+    else {
+        [self.databaseManager requestAddToFavorites:self.product forManagedContext:self.managedObjectContext success:^(IXMSavedProduct *saved_product) {
+            self.isRefreshingFavoritesDetails = NO;
+            self.savedProductDetails = saved_product;
+            [self informFavouritesChangeFinished:YES];
+        } failure:^(NSError *error) {
+            self.isRefreshingFavoritesDetails = NO;
+            [self informFavouritesChangeFinished:NO];
+        }];
+    }
+    
+}
+
 - (void)performFetchProductUsingMPId {
     self.activityIndicator.hidden = NO;
     [self.activityIndicator startAnimating];
@@ -164,6 +220,7 @@
             self.totalPriceOfferCount = offerCount;
             
             [self setUpSegmentControl];
+            [self refreshFavoritesOption];
             self.activityIndicator.hidden = YES;
         }
         else {
@@ -217,6 +274,7 @@
     [self.priceAcrossStores addObjectsFromArray:productprices];
     self.pricePageNumber = page;
 }
+
 
 
 /*

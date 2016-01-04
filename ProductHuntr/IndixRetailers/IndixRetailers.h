@@ -6,6 +6,6 @@
 //  Copyright © 2015 Indix. All rights reserved.
 //
 
-#import "IXRCoreInitializer.h"
-#import "IXRTheme.h"
+
+#import "IXRetailerHelperConfig.h"
 #import "IXRViewControllerHelper.h"

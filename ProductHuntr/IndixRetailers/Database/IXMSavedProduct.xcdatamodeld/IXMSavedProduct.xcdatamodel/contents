@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Xcode 7.0">
+    <entity name="IXMSavedProduct" representedClassName="IXMSavedProduct" syncable="YES">
+        <attribute name="categoryIdPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryNamePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="indixVersionType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastRefreshTime" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="maxSalePrice" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="minSalePrice" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mpid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noOfStores" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="pid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priceRange" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="IXMSavedProduct" positionX="-54" positionY="-9" width="128" height="240"/>
+    </elements>
+</model>

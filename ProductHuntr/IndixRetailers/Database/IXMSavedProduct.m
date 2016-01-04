@@ -11,6 +11,21 @@
 
 @implementation IXMSavedProduct
 
+@dynamic pid;
+@dynamic mpid;
+@dynamic name;
+@dynamic priceRange;
+@dynamic imageURL;
+@dynamic noOfStores;
+@dynamic minSalePrice;
+@dynamic maxSalePrice;
+@dynamic currency;
+@dynamic indixVersionType;
+@dynamic lastRefreshTime;
+@dynamic categoryIdPath;
+@dynamic categoryNamePath;
+
+
 - (void)copyFromProduct:(IXProduct *)product {
     self.pid = product.pid;
     self.mpid = product.mpid;
@@ -18,7 +33,6 @@
     self.priceRange = product.priceRange;
     self.imageURL = product.imageURL;
     self.noOfStores = product.noOfStores;
-    self.productStores = @[];
     self.minSalePrice = product.minSalePrice;
     self.maxSalePrice = product.maxSalePrice;
     self.currency = product.currency;

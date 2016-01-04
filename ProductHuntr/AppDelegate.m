@@ -19,10 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [IXRCoreInitializer initializeIndixApiFromPropertyListFileAtLocation:@"config"];
-    [[IXRTheme instance] setThemeFrompList:@"config"];
-    
-    
+    [[IXRetailerHelperConfig instance] setConfigFrompList:@"local_config"];
     
     
     [self setUpTheme];
@@ -55,7 +52,7 @@
 }
 
 - (void) setUpTheme {
-    IXRTheme* theme = [IXRTheme instance];
+    IXRetailerHelperConfig* theme = [IXRetailerHelperConfig instance];
     
     [[UINavigationBar appearance] setBarTintColor:[theme navigationBarBarTintColor]];
     [[UINavigationBar appearance] setTintColor:[theme navigationBarTintColor]];

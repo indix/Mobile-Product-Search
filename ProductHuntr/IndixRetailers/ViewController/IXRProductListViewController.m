@@ -16,7 +16,7 @@
 #import "IXRProductFilterViewController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "UIImageEffects.h"
-#import "IXRTheme.h"
+#import "IXRetailerHelperConfig.h"
 
 
 @interface IXRProductListViewController () <UIActionSheetDelegate, IXRProductFilterViewControllerDelegate>
@@ -559,7 +559,7 @@
 - (void)setUpTitleView {
     
     if (!self.titleBarImage) {
-        self.titleBarImage = [UIImage imageNamed:[[IXRTheme instance] listTitleBlurredBackgroundImage]];
+        self.titleBarImage = [UIImage imageNamed:[[IXRetailerHelperConfig instance] listTitleBlurredBackgroundImage]];
     }
     
     UIImage *blurredBackgroundImage = [UIImageEffects imageByApplyingBlurToImage:self.titleBarImage withRadius:120.0 tintColor:[UIColor colorWithRed:160.0/255.0 green:45.0/255.0 blue:113.0/255.0 alpha:0.1] saturationDeltaFactor:1.8 maskImage:nil];

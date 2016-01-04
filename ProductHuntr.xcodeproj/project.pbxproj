@@ -22,7 +22,6 @@
 		F5712CA61C32A70300526585 /* InitialShareTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5712CA11C32A70300526585 /* InitialShareTableViewController.m */; };
 		F5712CA71C32A70300526585 /* IXWSearchProductResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5712CA31C32A70300526585 /* IXWSearchProductResultsCell.m */; };
 		F5712CA81C32A70300526585 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5712CA51C32A70300526585 /* ShareViewController.m */; };
-		F5712CAB1C32A8AF00526585 /* IXMSavedProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = F5712CAA1C32A8AF00526585 /* IXMSavedProduct.m */; };
 		F575C9481C35025100DA0DC8 /* InitialShareTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5712CA11C32A70300526585 /* InitialShareTableViewController.m */; };
 		F575C9491C35025800DA0DC8 /* IXWSearchProductResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5712CA31C32A70300526585 /* IXWSearchProductResultsCell.m */; };
 		F575C94A1C35025B00DA0DC8 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5712CA51C32A70300526585 /* ShareViewController.m */; };
@@ -34,8 +33,7 @@
 		F575C9511C3502C100DA0DC8 /* IXApiV2Core.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0027F1C212B2900DA492B /* IXApiV2Core.m */; };
 		F575C9521C3502C400DA0DC8 /* IXRApiParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002811C212B2900DA492B /* IXRApiParser.m */; };
 		F575C9531C3502C600DA0DC8 /* IXRApiV2Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002831C212B2900DA492B /* IXRApiV2Parser.m */; };
-		F575C9541C3502C900DA0DC8 /* IXRCoreInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002851C212B2900DA492B /* IXRCoreInitializer.m */; };
-		F575C9551C3502CF00DA0DC8 /* IXRTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002891C212B2900DA492B /* IXRTheme.m */; };
+		F575C9551C3502CF00DA0DC8 /* IXRetailerHelperConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002891C212B2900DA492B /* IXRetailerHelperConfig.m */; };
 		F575C9561C3502D100DA0DC8 /* IXRViewControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0028B1C212B2900DA492B /* IXRViewControllerHelper.m */; };
 		F575C9571C3502D600DA0DC8 /* IXSearchSuggestionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0028D1C212B2900DA492B /* IXSearchSuggestionHelper.m */; };
 		F575C9581C3502DB00DA0DC8 /* IXMBrandFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002951C212B2900DA492B /* IXMBrandFilter.m */; };
@@ -54,7 +52,6 @@
 		F575C9651C35030100DA0DC8 /* IXMSortType.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002AF1C212B2900DA492B /* IXMSortType.m */; };
 		F575C9661C35030400DA0DC8 /* IXMStoreFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002B11C212B2900DA492B /* IXMStoreFilter.m */; };
 		F575C9671C35030600DA0DC8 /* IXProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002B31C212B2900DA492B /* IXProduct.m */; };
-		F575C9681C35030800DA0DC8 /* IXMSavedProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = F5712CAA1C32A8AF00526585 /* IXMSavedProduct.m */; };
 		F575C96A1C35031E00DA0DC8 /* 782-compass.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002B81C212B2900DA492B /* 782-compass.png */; };
 		F575C96B1C35032100DA0DC8 /* 782-compass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002B91C212B2900DA492B /* 782-compass@2x.png */; };
 		F575C96C1C35032700DA0DC8 /* backicon.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D002BA1C212B2900DA492B /* backicon.png */; };
@@ -108,6 +105,13 @@
 		F575C99D1C35034500DA0DC8 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002F21C212B2900DA492B /* UIImageEffects.m */; };
 		F575C99E1C35055600DA0DC8 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = F565D9C81C203E2600297959 /* config.plist */; };
 		F575C99F1C35055A00DA0DC8 /* local_config.plist in Resources */ = {isa = PBXBuildFile; fileRef = F565D9CC1C2040C000297959 /* local_config.plist */; };
+		F5A60F1F1C3A7BC80023392D /* IXMSavedProduct.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5A60F1D1C3A7BC80023392D /* IXMSavedProduct.xcdatamodeld */; };
+		F5A60F221C3A7E430023392D /* IXMDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A60F211C3A7E430023392D /* IXMDatabaseManager.m */; };
+		F5A60F261C3A968A0023392D /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F5A60F251C3A968A0023392D /* app_icon.png */; };
+		F5A60F271C3A996D0023392D /* IXMDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A60F211C3A7E430023392D /* IXMDatabaseManager.m */; };
+		F5A60F281C3A9F250023392D /* IXMSavedProduct.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5A60F1D1C3A7BC80023392D /* IXMSavedProduct.xcdatamodeld */; };
+		F5A60F2B1C3A9FF10023392D /* IXMSavedProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A60F2A1C3A9FF10023392D /* IXMSavedProduct.m */; };
+		F5A60F2C1C3A9FF40023392D /* IXMSavedProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A60F2A1C3A9FF10023392D /* IXMSavedProduct.m */; };
 		F5C3370B1C2034E700E4D3B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C3370A1C2034E700E4D3B1 /* main.m */; };
 		F5C3370E1C2034E700E4D3B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C3370D1C2034E700E4D3B1 /* AppDelegate.m */; };
 		F5C337111C2034E700E4D3B1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C337101C2034E700E4D3B1 /* ViewController.m */; };
@@ -120,9 +124,8 @@
 		F5D003211C212B2900DA492B /* IXApiV2Core.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0027F1C212B2900DA492B /* IXApiV2Core.m */; };
 		F5D003221C212B2900DA492B /* IXRApiParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002811C212B2900DA492B /* IXRApiParser.m */; };
 		F5D003231C212B2900DA492B /* IXRApiV2Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002831C212B2900DA492B /* IXRApiV2Parser.m */; };
-		F5D003241C212B2900DA492B /* IXRCoreInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002851C212B2900DA492B /* IXRCoreInitializer.m */; };
 		F5D003251C212B2900DA492B /* IXRetailerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002871C212B2900DA492B /* IXRetailerHelper.m */; };
-		F5D003261C212B2900DA492B /* IXRTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002891C212B2900DA492B /* IXRTheme.m */; };
+		F5D003261C212B2900DA492B /* IXRetailerHelperConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002891C212B2900DA492B /* IXRetailerHelperConfig.m */; };
 		F5D003271C212B2900DA492B /* IXRViewControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0028B1C212B2900DA492B /* IXRViewControllerHelper.m */; };
 		F5D003281C212B2900DA492B /* IXSearchSuggestionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0028D1C212B2900DA492B /* IXSearchSuggestionHelper.m */; };
 		F5D003291C212B2900DA492B /* IndixRetailer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D0028E1C212B2900DA492B /* IndixRetailer.storyboard */; };
@@ -280,8 +283,14 @@
 		F5712CA31C32A70300526585 /* IXWSearchProductResultsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IXWSearchProductResultsCell.m; path = Widget/IXWSearchProductResultsCell.m; sourceTree = "<group>"; };
 		F5712CA41C32A70300526585 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareViewController.h; path = Widget/ShareViewController.h; sourceTree = "<group>"; };
 		F5712CA51C32A70300526585 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareViewController.m; path = Widget/ShareViewController.m; sourceTree = "<group>"; };
-		F5712CA91C32A8AF00526585 /* IXMSavedProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXMSavedProduct.h; sourceTree = "<group>"; };
-		F5712CAA1C32A8AF00526585 /* IXMSavedProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXMSavedProduct.m; sourceTree = "<group>"; };
+		F5A60F1E1C3A7BC80023392D /* IXMSavedProduct.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IXMSavedProduct.xcdatamodel; sourceTree = "<group>"; };
+		F5A60F201C3A7E430023392D /* IXMDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IXMDatabaseManager.h; path = Database/IXMDatabaseManager.h; sourceTree = "<group>"; };
+		F5A60F211C3A7E430023392D /* IXMDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IXMDatabaseManager.m; path = Database/IXMDatabaseManager.m; sourceTree = "<group>"; };
+		F5A60F231C3A7F1A0023392D /* ProductHuntr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ProductHuntr.entitlements; sourceTree = "<group>"; };
+		F5A60F241C3A802B0023392D /* SearchWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SearchWidget.entitlements; sourceTree = SOURCE_ROOT; };
+		F5A60F251C3A968A0023392D /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon.png; sourceTree = "<group>"; };
+		F5A60F291C3A9FF10023392D /* IXMSavedProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IXMSavedProduct.h; path = Database/IXMSavedProduct.h; sourceTree = "<group>"; };
+		F5A60F2A1C3A9FF10023392D /* IXMSavedProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IXMSavedProduct.m; path = Database/IXMSavedProduct.m; sourceTree = "<group>"; };
 		F5C337061C2034E700E4D3B1 /* ProductHuntr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductHuntr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C3370A1C2034E700E4D3B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5C3370C1C2034E700E4D3B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -306,12 +315,10 @@
 		F5D002811C212B2900DA492B /* IXRApiParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXRApiParser.m; sourceTree = "<group>"; };
 		F5D002821C212B2900DA492B /* IXRApiV2Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXRApiV2Parser.h; sourceTree = "<group>"; };
 		F5D002831C212B2900DA492B /* IXRApiV2Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXRApiV2Parser.m; sourceTree = "<group>"; };
-		F5D002841C212B2900DA492B /* IXRCoreInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXRCoreInitializer.h; sourceTree = "<group>"; };
-		F5D002851C212B2900DA492B /* IXRCoreInitializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXRCoreInitializer.m; sourceTree = "<group>"; };
 		F5D002861C212B2900DA492B /* IXRetailerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXRetailerHelper.h; sourceTree = "<group>"; };
 		F5D002871C212B2900DA492B /* IXRetailerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXRetailerHelper.m; sourceTree = "<group>"; };
-		F5D002881C212B2900DA492B /* IXRTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXRTheme.h; sourceTree = "<group>"; };
-		F5D002891C212B2900DA492B /* IXRTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXRTheme.m; sourceTree = "<group>"; };
+		F5D002881C212B2900DA492B /* IXRetailerHelperConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXRetailerHelperConfig.h; sourceTree = "<group>"; };
+		F5D002891C212B2900DA492B /* IXRetailerHelperConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXRetailerHelperConfig.m; sourceTree = "<group>"; };
 		F5D0028A1C212B2900DA492B /* IXRViewControllerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXRViewControllerHelper.h; sourceTree = "<group>"; };
 		F5D0028B1C212B2900DA492B /* IXRViewControllerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXRViewControllerHelper.m; sourceTree = "<group>"; };
 		F5D0028C1C212B2900DA492B /* IXSearchSuggestionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXSearchSuggestionHelper.h; sourceTree = "<group>"; };
@@ -511,6 +518,7 @@
 		F5712C8C1C32A56A00526585 /* SearchWidget */ = {
 			isa = PBXGroup;
 			children = (
+				F5A60F241C3A802B0023392D /* SearchWidget.entitlements */,
 				F5712C931C32A56B00526585 /* Info.plist */,
 			);
 			name = SearchWidget;
@@ -530,6 +538,18 @@
 				F5712C9D1C32A6DB00526585 /* WidgetInterface.storyboard */,
 			);
 			name = Widget;
+			sourceTree = "<group>";
+		};
+		F5A60F1C1C3A7B030023392D /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				F5A60F291C3A9FF10023392D /* IXMSavedProduct.h */,
+				F5A60F2A1C3A9FF10023392D /* IXMSavedProduct.m */,
+				F5A60F1D1C3A7BC80023392D /* IXMSavedProduct.xcdatamodeld */,
+				F5A60F201C3A7E430023392D /* IXMDatabaseManager.h */,
+				F5A60F211C3A7E430023392D /* IXMDatabaseManager.m */,
+			);
+			name = Database;
 			sourceTree = "<group>";
 		};
 		F5C336FD1C2034E700E4D3B1 = {
@@ -560,6 +580,8 @@
 		F5C337081C2034E700E4D3B1 /* ProductHuntr */ = {
 			isa = PBXGroup;
 			children = (
+				F5A60F251C3A968A0023392D /* app_icon.png */,
+				F5A60F231C3A7F1A0023392D /* ProductHuntr.entitlements */,
 				F565D9CC1C2040C000297959 /* local_config.plist */,
 				F565D9C81C203E2600297959 /* config.plist */,
 				F565D9C01C203B4500297959 /* home_app_name.png */,
@@ -607,6 +629,7 @@
 		F5D0027A1C212B2900DA492B /* IndixRetailers */ = {
 			isa = PBXGroup;
 			children = (
+				F5A60F1C1C3A7B030023392D /* Database */,
 				F5712C9B1C32A67C00526585 /* Widget */,
 				F5D0027B1C212B2900DA492B /* Core */,
 				F5D0028E1C212B2900DA492B /* IndixRetailer.storyboard */,
@@ -632,12 +655,10 @@
 				F5D002811C212B2900DA492B /* IXRApiParser.m */,
 				F5D002821C212B2900DA492B /* IXRApiV2Parser.h */,
 				F5D002831C212B2900DA492B /* IXRApiV2Parser.m */,
-				F5D002841C212B2900DA492B /* IXRCoreInitializer.h */,
-				F5D002851C212B2900DA492B /* IXRCoreInitializer.m */,
 				F5D002861C212B2900DA492B /* IXRetailerHelper.h */,
 				F5D002871C212B2900DA492B /* IXRetailerHelper.m */,
-				F5D002881C212B2900DA492B /* IXRTheme.h */,
-				F5D002891C212B2900DA492B /* IXRTheme.m */,
+				F5D002881C212B2900DA492B /* IXRetailerHelperConfig.h */,
+				F5D002891C212B2900DA492B /* IXRetailerHelperConfig.m */,
 				F5D0028A1C212B2900DA492B /* IXRViewControllerHelper.h */,
 				F5D0028B1C212B2900DA492B /* IXRViewControllerHelper.m */,
 				F5D0028C1C212B2900DA492B /* IXSearchSuggestionHelper.h */,
@@ -683,8 +704,6 @@
 				F5D002B11C212B2900DA492B /* IXMStoreFilter.m */,
 				F5D002B21C212B2900DA492B /* IXProduct.h */,
 				F5D002B31C212B2900DA492B /* IXProduct.m */,
-				F5712CA91C32A8AF00526585 /* IXMSavedProduct.h */,
-				F5712CAA1C32A8AF00526585 /* IXMSavedProduct.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -913,9 +932,21 @@
 				TargetAttributes = {
 					F5712C8A1C32A56A00526585 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = U2ZBHWR6WM;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					F5C337051C2034E700E4D3B1 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = U2ZBHWR6WM;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					F5C3371E1C2034E700E4D3B1 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -1012,6 +1043,7 @@
 			files = (
 				F5C337191C2034E700E4D3B1 /* LaunchScreen.storyboard in Resources */,
 				F565D9C41C203B4500297959 /* list_titlebar_bg.png in Resources */,
+				F5A60F261C3A968A0023392D /* app_icon.png in Resources */,
 				F5D0034A1C212B2900DA492B /* icon_favorite_refresh.png in Resources */,
 				F5D003651C212B2900DA492B /* search_bar_code@2x.png in Resources */,
 				F5D003581C212B2900DA492B /* icon_type_sort@3x.png in Resources */,
@@ -1262,21 +1294,22 @@
 			files = (
 				F575C9511C3502C100DA0DC8 /* IXApiV2Core.m in Sources */,
 				F575C9501C3502BE00DA0DC8 /* IXApiCore.m in Sources */,
+				F5A60F2C1C3A9FF40023392D /* IXMSavedProduct.m in Sources */,
 				F575C95F1C3502F100DA0DC8 /* IXMProductDescriptionAttributes.m in Sources */,
 				F575C9631C3502FC00DA0DC8 /* IXMSearchType.m in Sources */,
 				F575C95B1C3502E500DA0DC8 /* IXMDisplayCategoryFilter.m in Sources */,
 				F575C9621C3502F800DA0DC8 /* IXMRecentSearchItem.m in Sources */,
 				F575C95C1C3502E700DA0DC8 /* IXMFilterObjects.m in Sources */,
-				F575C9551C3502CF00DA0DC8 /* IXRTheme.m in Sources */,
+				F575C9551C3502CF00DA0DC8 /* IXRetailerHelperConfig.m in Sources */,
 				F575C9481C35025100DA0DC8 /* InitialShareTableViewController.m in Sources */,
 				F575C9991C35033A00DA0DC8 /* IXRUtils.m in Sources */,
+				F5A60F281C3A9F250023392D /* IXMSavedProduct.xcdatamodeld in Sources */,
 				F575C9581C3502DB00DA0DC8 /* IXMBrandFilter.m in Sources */,
 				F575C95E1C3502EE00DA0DC8 /* IXMPriceAggregator.m in Sources */,
 				F575C9601C3502F300DA0DC8 /* IXMProductDetail.m in Sources */,
 				F575C99C1C35034200DA0DC8 /* UIColor+Extended.m in Sources */,
 				F575C95D1C3502EB00DA0DC8 /* IXMFreshness.m in Sources */,
 				F575C9521C3502C400DA0DC8 /* IXRApiParser.m in Sources */,
-				F575C9681C35030800DA0DC8 /* IXMSavedProduct.m in Sources */,
 				F575C9491C35025800DA0DC8 /* IXWSearchProductResultsCell.m in Sources */,
 				F575C94F1C3502BA00DA0DC8 /* BarCode.m in Sources */,
 				F575C9981C35033700DA0DC8 /* IXRPriceTypeUtils.m in Sources */,
@@ -1284,7 +1317,6 @@
 				F575C9671C35030600DA0DC8 /* IXProduct.m in Sources */,
 				F575C9641C3502FF00DA0DC8 /* IXMSelectedFilters.m in Sources */,
 				F575C94E1C3502AD00DA0DC8 /* IXRetailerHelper.m in Sources */,
-				F575C9541C3502C900DA0DC8 /* IXRCoreInitializer.m in Sources */,
 				F575C94A1C35025B00DA0DC8 /* ShareViewController.m in Sources */,
 				F575C9611C3502F600DA0DC8 /* IXMProductPrice.m in Sources */,
 				F575C9561C3502D100DA0DC8 /* IXRViewControllerHelper.m in Sources */,
@@ -1294,6 +1326,7 @@
 				F575C99D1C35034500DA0DC8 /* UIImageEffects.m in Sources */,
 				F575C9651C35030100DA0DC8 /* IXMSortType.m in Sources */,
 				F575C99B1C35033F00DA0DC8 /* NSString+URLEncoding.m in Sources */,
+				F5A60F271C3A996D0023392D /* IXMDatabaseManager.m in Sources */,
 				F575C9591C3502DF00DA0DC8 /* IXMCategoryFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1311,6 +1344,7 @@
 				F5D0033B1C212B2900DA492B /* IXProduct.m in Sources */,
 				F5D0036E1C212B2900DA492B /* NSString+URLEncoding.m in Sources */,
 				F5D003811C212B2900DA492B /* IXRSearchBarHolderView.m in Sources */,
+				F5A60F221C3A7E430023392D /* IXMDatabaseManager.m in Sources */,
 				F5D0032C1C212B2900DA492B /* IXMBrandFilter.m in Sources */,
 				F5C3370E1C2034E700E4D3B1 /* AppDelegate.m in Sources */,
 				F5D0036B1C212B2900DA492B /* IXRPriceTypeUtils.m in Sources */,
@@ -1340,12 +1374,12 @@
 				F5D0032F1C212B2900DA492B /* IXMDisplayCategoryFilter.m in Sources */,
 				F5D0038F1C21582C00DA492B /* IndixRetailers.h in Sources */,
 				F5C3370B1C2034E700E4D3B1 /* main.m in Sources */,
-				F5712CAB1C32A8AF00526585 /* IXMSavedProduct.m in Sources */,
 				F5D003221C212B2900DA492B /* IXRApiParser.m in Sources */,
+				F5A60F1F1C3A7BC80023392D /* IXMSavedProduct.xcdatamodeld in Sources */,
 				F5D0037D1C212B2900DA492B /* IXMCategoryFilterViewTableViewCell.m in Sources */,
-				F5D003241C212B2900DA492B /* IXRCoreInitializer.m in Sources */,
 				F5D003711C212B2900DA492B /* IXRCatalogDescriptionViewController.m in Sources */,
 				F5D0033A1C212B2900DA492B /* IXMStoreFilter.m in Sources */,
+				F5A60F2B1C3A9FF10023392D /* IXMSavedProduct.m in Sources */,
 				F5D003391C212B2900DA492B /* IXMSortType.m in Sources */,
 				F5D003361C212B2900DA492B /* IXMRecentSearchItem.m in Sources */,
 				F5D003701C212B2900DA492B /* UIImageEffects.m in Sources */,
@@ -1354,7 +1388,7 @@
 				F5D003771C212B2900DA492B /* IXRSearchDisplayViewController.m in Sources */,
 				F5D003331C212B2900DA492B /* IXMProductDescriptionAttributes.m in Sources */,
 				F5712CA71C32A70300526585 /* IXWSearchProductResultsCell.m in Sources */,
-				F5D003261C212B2900DA492B /* IXRTheme.m in Sources */,
+				F5D003261C212B2900DA492B /* IXRetailerHelperConfig.m in Sources */,
 				F5D0032A1C212B2900DA492B /* BarCode.m in Sources */,
 				F5D003351C212B2900DA492B /* IXMProductPrice.m in Sources */,
 				F5D003271C212B2900DA492B /* IXRViewControllerHelper.m in Sources */,
@@ -1421,11 +1455,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 083B26631DE524D7A3C28411 /* Pods-SearchWidget.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SearchWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Search/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.indix.opensource.ProductHuntr.Search;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1434,11 +1472,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FD5F8BE763A093FA92ECD82F /* Pods-SearchWidget.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SearchWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Search/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.indix.opensource.ProductHuntr.Search;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -1528,10 +1570,14 @@
 			baseConfigurationReference = E8DB32DEA926041FEC1B2239 /* Pods-ProductHuntr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ProductHuntr/ProductHuntr.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ProductHuntr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.indix.opensource.ProductHuntr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1540,10 +1586,14 @@
 			baseConfigurationReference = CAE0104AFE6E698FE107E4D3 /* Pods-ProductHuntr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ProductHuntr/ProductHuntr.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ProductHuntr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.indix.opensource.ProductHuntr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -1648,6 +1698,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F5A60F1D1C3A7BC80023392D /* IXMSavedProduct.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F5A60F1E1C3A7BC80023392D /* IXMSavedProduct.xcdatamodel */,
+			);
+			currentVersion = F5A60F1E1C3A7BC80023392D /* IXMSavedProduct.xcdatamodel */;
+			name = IXMSavedProduct.xcdatamodeld;
+			path = Database/IXMSavedProduct.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F5C336FE1C2034E700E4D3B1 /* Project object */;
 }

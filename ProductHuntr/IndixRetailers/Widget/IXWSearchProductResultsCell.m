@@ -11,7 +11,9 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface IXWSearchProductResultsCell ()
-    @property (nonatomic) AFHTTPRequestOperation *imageOperation;
+
+@property (nonatomic) AFHTTPRequestOperation *imageOperation;
+
 @end
 
 @implementation IXWSearchProductResultsCell

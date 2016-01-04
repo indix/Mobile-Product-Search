@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IXRTheme : NSObject
+@interface IXRetailerHelperConfig : NSObject
 
 /**
  Helper class to save some theme related attributes which UI can use.s
@@ -26,10 +26,13 @@
 @property (nonatomic, strong, readonly) NSString *homeAppLogoImage;
 @property (nonatomic, strong, readonly) NSString *widgetAppLogoImage;
 
+@property (nonatomic, strong, readonly) NSString *shareWidgetIdentifier;
+@property (nonatomic, strong, readonly) NSString *groupIdentifier;
+@property (nonatomic, strong, readonly) NSString *databaseName;
+
 + (id)instance;
 
-- (void)setThemeFrompList:(NSString *)pListPath;
-
+- (void)setConfigFrompList:(NSString *)pListPath;
 
 
 @end

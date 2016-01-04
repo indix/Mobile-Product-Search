@@ -29,11 +29,11 @@
     self.navigationController.navigationBar.hidden = YES;
     self.searchBarholder.delegate = self;
     
-    UIImage* backgroundImage = [UIImage imageNamed:[[IXRTheme instance] homeScreenBlurredBackgroundImage]];
-    UIImage *blurredBackgroundImage = [UIImageEffects imageByApplyingBlurToImage:backgroundImage withRadius:25.0 tintColor:[[IXRTheme instance] homeScreenBlurredBackgroundTintColor] saturationDeltaFactor:1.5 maskImage:nil];
+    UIImage* backgroundImage = [UIImage imageNamed:[[IXRetailerHelperConfig instance] homeScreenBlurredBackgroundImage]];
+    UIImage *blurredBackgroundImage = [UIImageEffects imageByApplyingBlurToImage:backgroundImage withRadius:25.0 tintColor:[[IXRetailerHelperConfig instance] homeScreenBlurredBackgroundTintColor] saturationDeltaFactor:1.5 maskImage:nil];
     self.backgroundImageView.image = blurredBackgroundImage;
     
-    self.homeAppLogo.image = [UIImage imageNamed:[[IXRTheme instance] homeAppLogoImage]];
+    self.homeAppLogo.image = [UIImage imageNamed:[[IXRetailerHelperConfig instance] homeAppLogoImage]];
     self.retailerStoryboard = [IXRViewControllerHelper retailerStoryboard];
 }
 

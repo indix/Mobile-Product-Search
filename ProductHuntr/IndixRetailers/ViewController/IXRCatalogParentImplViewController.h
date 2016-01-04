@@ -27,11 +27,14 @@
 
 @property (nonatomic, readonly, strong) IXProduct *product;
 
+@property (nonatomic, readonly, assign) BOOL isDoingFavouriting;
+@property (nonatomic, readonly, assign) BOOL isAddedtoFavorites;
 
 - (BOOL)isFetchingProductinformation;
 - (NSString *)productOffers;
 - (NSString *)storeCount;
 
+- (void)doToggleFavoritesOption;
 - (void)doShowAllPrices;
 
 - (void)addPricesFromArray:(NSArray *)productprices forPage:(NSInteger)page;

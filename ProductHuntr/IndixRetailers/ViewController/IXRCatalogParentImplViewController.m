@@ -68,6 +68,18 @@
     [self.parentVC addPricesFromArray:productprices forPage:page];
 }
 
+- (BOOL)isDoingFavouriting {
+    return self.parentVC.isRefreshingFavoritesDetails;
+}
+
+- (BOOL)isAddedtoFavorites {
+    return self.parentVC.isSavedToFavorites;
+}
+
+- (void)doToggleFavoritesOption {
+    [self.parentVC changeFavoritesState];
+}
+
 /*
 #pragma mark - Navigation
 

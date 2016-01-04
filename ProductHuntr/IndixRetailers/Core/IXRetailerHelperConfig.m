@@ -6,18 +6,19 @@
 //  Copyright © 2015 Indix. All rights reserved.
 //
 
-#import "IXRTheme.h"
+#import "IXRetailerHelperConfig.h"
 #import "IXRUtils.h"
 #import "UIColor+Extended.h"
+#import "IXApiV2Core.h"
 
-@implementation IXRTheme
+@implementation IXRetailerHelperConfig
 
 + (id)instance {
     
-    static IXRTheme* sharedAppearance = nil;
+    static IXRetailerHelperConfig* sharedAppearance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedAppearance = [[IXRTheme alloc] init];
+        sharedAppearance = [[IXRetailerHelperConfig alloc] init];
         [sharedAppearance refreshAppearanceProperties]; //defaults get set.
         
     });
@@ -25,14 +26,26 @@
     return sharedAppearance;
 }
 
+#pragma mark - Indix API Initialization methods
+- (BOOL)initializeIndixApiFromPropertyList {
+    if ([_customThemeProperties objectForKey:@"indix_app_id"] && [_customThemeProperties objectForKey:@"indix_app_key"]) {
+        [IXApiV2Core setServiceTokenId:[_customThemeProperties objectForKey:@"indix_app_id"]
+                                appKey:[_customThemeProperties objectForKey:@"indix_app_key"]];
+        return YES;
+    }
+    return NO;
+}
 
-- (void)setThemeFrompList:(NSString *)pListPath {
+
+- (void)setConfigFrompList:(NSString *)pListPath {
     [self setCustomThemeProperties:[IXRUtils readPropertiesFrompList:pListPath]];
 }
 
 - (void)setCustomThemeProperties:(NSDictionary *)customThemeProperties {
-    
     _customThemeProperties = customThemeProperties;
+    if (![self initializeIndixApiFromPropertyList]) {
+        NSLog(@"Indix Api id and key was not defined");
+    }
     [self refreshAppearanceProperties]; //if theme exist, those colors or fonts get set.
 }
 
@@ -111,6 +124,30 @@
         return str;
     }
     return @"home_app_name.png";
+}
+
+- (NSString *)shareWidgetIdentifier {
+    NSString *str = [self readStringPropertiesForKey:@"share_widget_identifier"];
+    if (str) {
+        return str;
+    }
+    return @"producthuntr";
+}
+
+- (NSString *)groupIdentifier {
+    NSString *str = [self readStringPropertiesForKey:@"group_identifier"];
+    if (str) {
+        return str;
+    }
+    return @"group.com.indix.opensource.ProductHuntr";
+}
+
+- (NSString *)databaseName {
+    NSString *str = [self readStringPropertiesForKey:@"database_name"];
+    if (str) {
+        return str;
+    }
+    return @"producthuntr.sqlite";
 }
 
 - (NSString *)readStringPropertiesForKey:(NSString *)key {

@@ -16,5 +16,11 @@
 	<string>home_app_name.png</string>
 	<key>widgetAppLogoImage</key>
 	<string>home_app_name.png</string>
+	<key>share_widget_identifier</key>
+	<string>producthuntr</string>
+	<key>group_identifier</key>
+	<string>group.com.indix.opensource.ProductHuntr</string>
+	<key>database_name</key>
+	<string>producthuntr.sqlite</string>
 </dict>
 </plist>

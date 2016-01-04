@@ -22,7 +22,6 @@
 #import "IXMStoreFilter.h"
 #import "IXMFilterObjects.h"
 #import "IXMSelectedFilters.h"
-#import "IXMSavedProduct.h"
 
 
 @interface IXRetailerHelper : NSObject
@@ -67,9 +66,9 @@
 
 
 // Favorites
-+ (void)requestAddToFavorites:(IXProduct *)product success:(void (^)(IXMSavedProduct *saved_product))success failure:(void (^)(NSError *error))failure;
-+ (void)requestCheckIfAddedToFavorites:(IXProduct *)product success:(void (^)(IXMSavedProduct *saved_product))success failure:(void (^)(NSError *error))failure;
-+ (void)requestRemoveFromFavorites:(IXMSavedProduct *)saved_product success:(void (^)(void))success failure:(void (^)(NSError *error))failure;
+//+ (void)requestAddToFavorites:(IXProduct *)product success:(void (^)(IXMSavedProduct *saved_product))success failure:(void (^)(NSError *error))failure;
+//+ (void)requestCheckIfAddedToFavorites:(IXProduct *)product success:(void (^)(IXMSavedProduct *saved_product))success failure:(void (^)(NSError *error))failure;
+//+ (void)requestRemoveFromFavorites:(IXMSavedProduct *)saved_product success:(void (^)(void))success failure:(void (^)(NSError *error))failure;
 
 // CountyCode
 + (void)requestSaveCountyCode:(IXMCountryCode *)code;
@@ -86,3 +85,5 @@
 + (AFHTTPRequestOperationManager *)getRequestOperationManager;
 
 @end
+
+

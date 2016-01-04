@@ -10,11 +10,9 @@
 #import <UIImageView+AFNetworking.h>
 #import "IXRetailerHelper.h"
 #import "IXProduct.h"
-#import "IXMSavedProduct.h"
 #import "IXWSearchProductResultsCell.h"
 #import "ShareViewController.h"
-#import "IXRTheme.h"
-#import "IXRCoreInitializer.h"
+#import "IXRetailerHelperConfig.h"
 
 @interface InitialShareTableViewController ()<UITableViewDataSource, UITableViewDelegate, ShareViewControllerDelegate> {
     NSInteger totalAttachment;
@@ -40,13 +38,18 @@
 @implementation InitialShareTableViewController
 
 - (BOOL)isContentValid {
-    // Do validation of contentText and/or NSExtensionContext attachments here
-    //    NSExtensionItem *item = self.extensionContext.inputItems[0];
-    //    NSItemProvider *itemProvider = item.attachments[0];
-    //
-    //    if ([itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypePlainText]) {
-    //    }
-    return YES;
+    NSExtensionItem *item = self.extensionContext.inputItems[0];
+    NSArray *atatchments = item.attachments;
+    for (NSItemProvider  *itemProvider in atatchments) {
+        if ([itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypePlainText]) {
+            return YES;
+        }
+        if ([itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeURL]) {
+            return YES;
+        }
+    }
+    
+    return NO;
 }
 
 - (NSArray *)configurationItems {
@@ -59,11 +62,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [IXRCoreInitializer initializeIndixApiFromPropertyListFileAtLocation:@"local_config"];
-    [[IXRTheme instance] setThemeFrompList:@"config"];
+    [[IXRetailerHelperConfig instance] setConfigFrompList:@"local_config"];
     self.operationManager = [IXRetailerHelper getRequestOperationManager];
     
-    self.titleImageView.image = [UIImage imageNamed:[[IXRTheme instance] widgetAppLogoImage]];
+    self.titleImageView.image = [UIImage imageNamed:[[IXRetailerHelperConfig instance] widgetAppLogoImage]];
     
     self.view.backgroundColor = [UIColor colorWithRed:156.0/255.0 green:156.0/255.0 blue:156.0/255.0 alpha:0.8];
     UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:_popupView.bounds];
@@ -158,12 +160,20 @@
         [IXRetailerHelper requestSearchProductFromShareText:shareText page:nil sortBy:nil withManager:self.operationManager success:^(AFHTTPRequestOperation *operation, NSArray *productsArray, NSInteger count) {
             self.productArray = productsArray;
             [self.tableView reloadData];
-            if (productsArray.count == 1) {
-                [self showShareViewControllerWithProduct:[productsArray objectAtIndex:0] enableback:NO];
+            if (productsArray.count == 0) {
+                self.activityIndicator.hidden = YES;
+                self.emptyView.hidden = YES;
+                self.errorView.hidden = NO;
             }
-            // TODO:
-            self.activityIndicator.hidden = YES;
-            self.emptyView.hidden = YES;
+            else {
+                if (productsArray.count == 1) {
+                    [self showShareViewControllerWithProduct:[productsArray objectAtIndex:0] enableback:NO];
+                }
+                // TODO:
+                self.activityIndicator.hidden = YES;
+                self.emptyView.hidden = YES;
+            }
+            
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             self.activityIndicator.hidden = YES;
             self.emptyView.hidden = YES;
@@ -188,7 +198,9 @@
 }
 
 - (IBAction)goToSearchTap:(id)sender {
-    [self openUrl:[NSURL URLWithString:@"ixplore://product_search"]];
+    NSString *shareStringIdentifier = [[IXRetailerHelperConfig instance] shareWidgetIdentifier];
+    ;
+    [self openUrl:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",shareStringIdentifier, @"://product_search"]]];
     [self close];
 }
 

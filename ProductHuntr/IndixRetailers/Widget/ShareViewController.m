@@ -11,7 +11,8 @@
 #import "IXMSavedProduct.h"
 #import "IXRetailerHelper.h"
 #import <UIImageView+AFNetworking.h>
-#import "IXRTheme.h"
+#import "IXRetailerHelperConfig.h"
+#import "IXMDatabaseManager.h"
 
 @interface ShareViewController ()
 
@@ -38,7 +39,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 
 @property (nonatomic, assign) BOOL isRefreshingFavoritesDetails;
-@property (nonatomic, strong) IXMSavedProduct *savedProduct;
+
+@property (readwrite, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) IXMDatabaseManager *databaseManager;
+@property (nonatomic, strong) IXMSavedProduct *savedProductDetails;
 
 @end
 
@@ -65,11 +69,13 @@
     
     // Setting up Local data store
     
-    self.titleImageView.image = [UIImage imageNamed:[[IXRTheme instance] widgetAppLogoImage]];
+    self.databaseManager = [IXMDatabaseManager sharedManager];
+    self.managedObjectContext = [self.databaseManager createManagedObjectContextWithConcurrencyType:NSMainQueueConcurrencyType];
+    
+    self.titleImageView.image = [UIImage imageNamed:[[IXRetailerHelperConfig instance] widgetAppLogoImage]];
     
     self.view.backgroundColor = [UIColor colorWithRed:156.0/255.0 green:156.0/255.0 blue:156.0/255.0 alpha:0.8];
     
-//    _popupView.clipsToBounds = NO;
     UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:_popupView.bounds];
     _popupView.layer.cornerRadius = 10.0f;
     _popupView.layer.masksToBounds = NO;
@@ -159,9 +165,9 @@
 }
 
 - (IBAction)moreClickListener:(id)sender {
-    NSMutableString *string = [[NSMutableString alloc] initWithString:@"ixplore://product_detail?mpid="];
-    [string appendString:self.product.mpid];
-    [self.delegate openUrl:[NSURL URLWithString:string]];
+    NSString *shareStringIdentifier = [[IXRetailerHelperConfig instance] shareWidgetIdentifier];
+    ;
+    [self.delegate openUrl:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@",shareStringIdentifier, @"://product_detail?mpid=", self.product.mpid]]];
 }
 
 - (IBAction)doneTapped:(id)sender {
@@ -176,19 +182,19 @@
 }
 
 - (void)refreshFavoritesOption {
-    self.isRefreshingFavoritesDetails = YES;
-    [self refreshAddToFavorite];
-    [IXRetailerHelper requestCheckIfAddedToFavorites:self.product success:^(IXMSavedProduct *saved_product) {
-        if (saved_product) {
-            self.savedProduct = saved_product;
+    if (self.product) {
+        self.isRefreshingFavoritesDetails = YES;
+        [self refreshAddToFavorite];
+        IXMSavedProduct* prod = [self.self.databaseManager requestCheckIfAddedToFavorites:self.product forManagedContext:self.managedObjectContext];
+        if (prod) {
+            self.savedProductDetails = prod;
         }
         self.isRefreshingFavoritesDetails = NO;
-        [self refreshAddToFavorite];
-    } failure:^(NSError *error) {
-        self.isRefreshingFavoritesDetails = NO;
-        [self refreshAddToFavorite];
-    }];
+    }
+    [self refreshAddToFavorite];
 }
+
+
 
 - (void)refreshAddToFavorite {
     [self.addRemoveFavbutton setEnabled:!self.isRefreshingFavoritesDetails];
@@ -209,7 +215,7 @@
 }
 
 - (BOOL)isSavedToFavorites {
-    return self.savedProduct != nil;
+    return self.savedProductDetails != nil;
 }
 
 - (void)favoriteButtonTapped:(id)sender {
@@ -226,9 +232,9 @@
     self.isRefreshingFavoritesDetails = YES;
     [self refreshAddToFavorite];
     if ([self isSavedToFavorites]) {
-        [IXRetailerHelper requestRemoveFromFavorites:self.savedProduct success:^{
+        [self.databaseManager requestRemoveFromFavorites:self.savedProductDetails forManagedContext:self.managedObjectContext success:^{
             self.isRefreshingFavoritesDetails = NO;
-            self.savedProduct = nil;
+            self.savedProductDetails = nil;
             [self refreshAddToFavorite];
         } failure:^(NSError *error) {
             self.isRefreshingFavoritesDetails = NO;
@@ -236,9 +242,9 @@
         }];
     }
     else {
-        [IXRetailerHelper requestAddToFavorites:self.product success:^(IXMSavedProduct *saved_product) {
+        [self.databaseManager requestAddToFavorites:self.product forManagedContext:self.managedObjectContext success:^(IXMSavedProduct *saved_product) {
             self.isRefreshingFavoritesDetails = NO;
-            self.savedProduct = saved_product;
+            self.savedProductDetails = saved_product;
             [self refreshAddToFavorite];
         } failure:^(NSError *error) {
             self.isRefreshingFavoritesDetails = NO;
