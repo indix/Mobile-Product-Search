@@ -13,7 +13,6 @@
 		E42CE1E4F916ED709E5145BE /* libPods-ProductHuntr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6FB6D3F9B40667041F131B6 /* libPods-ProductHuntr.a */; };
 		F565D9C31C203B4500297959 /* home_app_name.png in Resources */ = {isa = PBXBuildFile; fileRef = F565D9C01C203B4500297959 /* home_app_name.png */; };
 		F565D9C41C203B4500297959 /* list_titlebar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F565D9C11C203B4500297959 /* list_titlebar_bg.png */; };
-		F565D9C51C203B4500297959 /* home_background_image.png in Resources */ = {isa = PBXBuildFile; fileRef = F565D9C21C203B4500297959 /* home_background_image.png */; };
 		F565D9C91C203E2600297959 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = F565D9C81C203E2600297959 /* config.plist */; };
 		F565D9CD1C2040C000297959 /* local_config.plist in Resources */ = {isa = PBXBuildFile; fileRef = F565D9CC1C2040C000297959 /* local_config.plist */; };
 		F5712C961C32A56B00526585 /* SearchWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F5712C8B1C32A56A00526585 /* SearchWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -273,7 +272,6 @@
 		E8DB32DEA926041FEC1B2239 /* Pods-ProductHuntr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductHuntr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductHuntr/Pods-ProductHuntr.debug.xcconfig"; sourceTree = "<group>"; };
 		F565D9C01C203B4500297959 /* home_app_name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_app_name.png; path = ProductHuntr/home_app_name.png; sourceTree = SOURCE_ROOT; };
 		F565D9C11C203B4500297959 /* list_titlebar_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = list_titlebar_bg.png; path = ProductHuntr/list_titlebar_bg.png; sourceTree = SOURCE_ROOT; };
-		F565D9C21C203B4500297959 /* home_background_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_background_image.png; path = ProductHuntr/home_background_image.png; sourceTree = SOURCE_ROOT; };
 		F565D9C81C203E2600297959 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		F565D9CC1C2040C000297959 /* local_config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = local_config.plist; sourceTree = "<group>"; };
 		F5712C8B1C32A56A00526585 /* SearchWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SearchWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -590,7 +588,6 @@
 				F565D9C81C203E2600297959 /* config.plist */,
 				F565D9C01C203B4500297959 /* home_app_name.png */,
 				F565D9C11C203B4500297959 /* list_titlebar_bg.png */,
-				F565D9C21C203B4500297959 /* home_background_image.png */,
 				F5A60F251C3A968A0023392D /* app_icon.png */,
 				F5C3370C1C2034E700E4D3B1 /* AppDelegate.h */,
 				F5C3370D1C2034E700E4D3B1 /* AppDelegate.m */,
@@ -1071,7 +1068,6 @@
 				F5D003671C212B2900DA492B /* search_magnifying_glass_icon.png in Resources */,
 				F5D003531C212B2900DA492B /* icon_type_list.png in Resources */,
 				F5D003611C212B2900DA492B /* menu_settings@3x.png in Resources */,
-				F565D9C51C203B4500297959 /* home_background_image.png in Resources */,
 				F5D0035A1C212B2900DA492B /* menu_alert@2x.png in Resources */,
 				F5D0035D1C212B2900DA492B /* menu_home@2x.png in Resources */,
 				F565D9CD1C2040C000297959 /* local_config.plist in Resources */,
