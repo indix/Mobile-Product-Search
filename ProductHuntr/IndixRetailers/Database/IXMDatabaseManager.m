@@ -147,6 +147,7 @@
                                   inManagedObjectContext:managedObjectContext];
             
             [saved_product copyFromProduct:product];
+            saved_product.createdTime = [NSNumber numberWithDouble:(double)[[NSDate date] timeIntervalSince1970]];
             NSError *saveError = nil;
             // if added to favorites, delete from managed context.
             if ([self saveManagedObjectContext:managedObjectContext error:&saveError]) {

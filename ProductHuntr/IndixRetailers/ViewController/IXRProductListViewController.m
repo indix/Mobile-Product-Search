@@ -17,6 +17,7 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "UIImageEffects.h"
 #import "IXRetailerHelperConfig.h"
+#import "IXMDatabaseManager.h"
 
 
 @interface IXRProductListViewController () <UIActionSheetDelegate, IXRProductFilterViewControllerDelegate>
@@ -41,7 +42,6 @@
 @property (weak, nonatomic) IBOutlet UIView *titleBarholder;
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *collectionViewFlowLayout;
 
-@property (nonatomic, strong) NSString *mixPanelSearchDescription;
 
 @property (nonatomic, strong) UIActivityIndicatorView *loadingMoreView;
 @property (nonatomic, strong) UIActivityIndicatorView *gridloadingMoreView;
@@ -63,6 +63,13 @@
 @property (nonatomic, assign) NSInteger selectedFilterTabIndex;
 @property (nonatomic, strong) IXMDisplayCategoryFilter *selectedCategoryDisplayObject;
 
+@property (readwrite, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) IXMDatabaseManager *databaseManager;
+
+
+@property (nonatomic, strong) IXProduct *lastProductForLongPress;
+@property (nonatomic, assign) NSInteger lastPositionForLongPress;
+@property (nonatomic, strong) IXMSavedProduct *lastSavedProductForLongPress;
 
 @end
 
@@ -100,9 +107,9 @@
     // Start
     [self refreshTitle];
     [self performSearchOperation];
-    if (self.mixPanelSearchDescription) {
-        
-    }
+    
+    self.databaseManager = [IXMDatabaseManager sharedManager];
+    self.managedObjectContext = [self.databaseManager createManagedObjectContextWithConcurrencyType:NSMainQueueConcurrencyType];
     
     [self setNeedsStatusBarAppearanceUpdate];
 }
@@ -167,7 +174,37 @@
             [self resetSortType:[sortArray objectAtIndex:sortIndex]];
         }
     }
-    
+    else if (actionSheet.tag == 101) {
+        
+        if (buttonIndex == 0) {
+            if (self.lastSavedProductForLongPress) {
+                [self.databaseManager requestRemoveFromFavorites:self.lastSavedProductForLongPress forManagedContext:self.managedObjectContext success:^{
+                    self.lastSavedProductForLongPress = nil;
+                    self.lastProductForLongPress = nil;
+                    self.lastPositionForLongPress = 0;
+                } failure:^(NSError *error) {
+                    self.lastSavedProductForLongPress = nil;
+                    self.lastProductForLongPress = nil;
+                    self.lastPositionForLongPress = 0;
+                }];
+            }
+            else if (self.lastProductForLongPress) {
+                [self.databaseManager requestAddToFavorites:self.lastProductForLongPress forManagedContext:self.managedObjectContext success:^(IXMSavedProduct *saved_product) {
+                    self.lastSavedProductForLongPress = nil;
+                    self.lastProductForLongPress = nil;
+                    self.lastPositionForLongPress = 0;
+                } failure:^(NSError *error) {
+                    self.lastSavedProductForLongPress = nil;
+                    self.lastProductForLongPress = nil;
+                    self.lastPositionForLongPress = 0;
+                }];
+                
+            }
+        }
+        
+        
+    }
+
 }
 
 
@@ -194,8 +231,6 @@
         IXRCatalogViewController *controller = segue.destinationViewController;
         NSDictionary *dict = sender;
         controller.product = [dict objectForKey:@"product"];
-        controller.mixPanelSearchDescription = self.mixPanelSearchDescription;
-        controller.searchPosition = [[dict objectForKey:@"position"] integerValue];
     }
     else if ([segue.identifier isEqualToString:@"filterVCSegue"]) {
         IXRProductFilterViewController *productFilter = (IXRProductFilterViewController *)[segue.destinationViewController topViewController];
@@ -335,7 +370,8 @@
     
     [productResultCell setTag:1000 + indexPath.row];
     
-    
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressOnProductList:)];
+    [productResultCell addGestureRecognizer:lpgr];
     return productResultCell;
 }
 
@@ -404,6 +440,8 @@
     }
     
     [cell setTag:1000 + indexPath.row];
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressOnProductGrid:)];
+    [cell addGestureRecognizer:lpgr];
     
     return cell;
 }
@@ -497,6 +535,79 @@
 
 #pragma mark - utilis
 
+- (void)handleLongPressOnProductList:(UILongPressGestureRecognizer *)gesture {
+    
+    if (gesture.state == UIGestureRecognizerStateEnded) {
+        
+        NSInteger index = gesture.view.tag - 1000;
+        IXProduct *result = [self.productsListArray objectAtIndex:index];
+        
+        IXMSavedProduct *saved_product = [self.databaseManager requestCheckIfAddedToFavorites:result forManagedContext:self.managedObjectContext];
+        
+        if (saved_product) {
+            self.lastSavedProductForLongPress = saved_product;
+            self.lastProductForLongPress = result;
+            self.lastPositionForLongPress = index;
+            
+            UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Actions" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Remove from favorites", nil];
+            
+            [actionSheet setTag:101];
+            
+            [actionSheet showInView:self.view];
+        }
+        else {
+            self.lastSavedProductForLongPress = nil;
+            self.lastProductForLongPress = result;
+            self.lastPositionForLongPress = index;
+            UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Actions" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Add to favorites", nil];
+            
+            [actionSheet setTag:101];
+            
+            [actionSheet showInView:self.view];
+        }
+        
+    }
+    
+    
+    
+}
+
+- (void)handleLongPressOnProductGrid:(UILongPressGestureRecognizer *)gesture {
+    
+    if (gesture.state == UIGestureRecognizerStateEnded) {
+        
+        NSInteger index = gesture.view.tag - 1000;
+        IXProduct *result = [self.productsListArray objectAtIndex:index];
+        
+        IXMSavedProduct *saved_product = [self.databaseManager requestCheckIfAddedToFavorites:result forManagedContext:self.managedObjectContext];
+        
+        if (saved_product) {
+            self.lastSavedProductForLongPress = saved_product;
+            self.lastProductForLongPress = result;
+            self.lastPositionForLongPress = index;
+            
+            UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Actions" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Remove from favorites", nil];
+            
+            [actionSheet setTag:101];
+            
+            [actionSheet showInView:self.view];
+        }
+        else {
+            self.lastSavedProductForLongPress = nil;
+            self.lastProductForLongPress = result;
+            self.lastPositionForLongPress = index;
+            UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Actions" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Add to favorites", nil];
+            
+            [actionSheet setTag:101];
+            
+            [actionSheet showInView:self.view];
+        }
+    }
+    
+    
+    
+}
+
 - (void)setUpOptionMenu {
     UIColor *tintColor = [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1];
     
@@ -580,9 +691,6 @@
 - (void)refreshTitle {
     NSString *searchQuery;
     searchQuery = self.searchQuery;
-    self.mixPanelSearchDescription = self.searchQuery;
-    
-    
     self.title = @"";
     
     self.titleLabel.attributedText = [[NSAttributedString alloc] initWithString:[searchQuery capitalizedString] attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18.0]}];

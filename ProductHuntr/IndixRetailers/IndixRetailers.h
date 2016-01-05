@@ -9,3 +9,6 @@
 
 #import "IXRetailerHelperConfig.h"
 #import "IXRViewControllerHelper.h"
+#import "IXROpenUrlHandler.h"
+#import "IXMDatabaseManager.h"
+#import "IXRSearchBarHolderView.h"

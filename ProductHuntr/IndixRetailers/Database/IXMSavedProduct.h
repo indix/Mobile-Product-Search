@@ -18,7 +18,7 @@
 @property (nonatomic, retain) NSString *priceRange;
 @property (nonatomic, retain) NSString *imageURL;
 @property (nonatomic, retain) NSString *noOfStores;
-@property (nonatomic, retain) NSNumber *lastRefreshTime;
+@property (nonatomic, retain) NSNumber *createdTime;
 
 @property (nonatomic, retain) NSString *minSalePrice;
 @property (nonatomic, retain) NSString *maxSalePrice;

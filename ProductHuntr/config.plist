@@ -7,9 +7,9 @@
 	<key>indix_app_id</key>
 	<string>&lt;YOUR_INDIX_API_ID&gt;</string>
 	<key>homeScreenBlurredBackgroundImage</key>
-	<string>home_background_image.png</string>
+	<string>list_titlebar_bg.png</string>
 	<key>homeScreenBlurredBackgroundTintColor</key>
-	<string>255,255,255,0.9</string>
+	<string>255,20,20,0.2</string>
 	<key>listTitleBlurredBackgroundImage</key>
 	<string>list_titlebar_bg.png</string>
 	<key>homeAppLogoImage</key>

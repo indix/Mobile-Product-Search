@@ -3,10 +3,10 @@
     <entity name="IXMSavedProduct" representedClassName="IXMSavedProduct" syncable="YES">
         <attribute name="categoryIdPath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="categoryNamePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdTime" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="indixVersionType" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="lastRefreshTime" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="maxSalePrice" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="minSalePrice" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mpid" optional="YES" attributeType="String" syncable="YES"/>
@@ -16,6 +16,6 @@
         <attribute name="priceRange" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="IXMSavedProduct" positionX="-54" positionY="-9" width="128" height="240"/>
+        <element name="IXMSavedProduct" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

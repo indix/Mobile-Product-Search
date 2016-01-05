@@ -38,6 +38,17 @@
     return controller;
 }
 
++ (IXRCatalogViewController *)catalogViewControllerWithProduct:(IXMSavedProduct *)saved_product storyboard:(UIStoryboard *)storyboard {
+    IXRCatalogViewController *catalogVC = [storyboard instantiateViewControllerWithIdentifier:@"catalogVC"];
+    catalogVC.product = [saved_product copyOFProduct];
+    return catalogVC;
+}
+
++ (IXRCatalogViewController *)catalogViewControllerWithProductMpid:(NSString *)mpid storyboard:(UIStoryboard *)storyboard {
+    IXRCatalogViewController *catalogVC = [storyboard instantiateViewControllerWithIdentifier:@"catalogVC"];
+    catalogVC.productMPid = mpid;
+    return catalogVC;
+}
 
 + (UIStoryboard *)retailerStoryboard {
     return [UIStoryboard storyboardWithName:@"IndixRetailer" bundle:nil];

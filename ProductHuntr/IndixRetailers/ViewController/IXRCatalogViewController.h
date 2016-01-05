@@ -21,8 +21,6 @@
 
 // Public
 @property (nonatomic, strong) IXProduct *product;
-@property (nonatomic, strong) NSString *mixPanelSearchDescription;
-@property (nonatomic, assign) NSInteger searchPosition;
 @property (nonatomic, strong) NSString *productMPid;
 
 

@@ -21,7 +21,7 @@
 @dynamic maxSalePrice;
 @dynamic currency;
 @dynamic indixVersionType;
-@dynamic lastRefreshTime;
+@dynamic createdTime;
 @dynamic categoryIdPath;
 @dynamic categoryNamePath;
 
@@ -69,8 +69,8 @@
 }
 
 - (NSDate *)lastRefreshTimeDate {
-    if (self.lastRefreshTime) {
-        NSDate* date = [NSDate dateWithTimeIntervalSince1970:([self.lastRefreshTime doubleValue]/1000)];
+    if (self.createdTime) {
+        NSDate* date = [NSDate dateWithTimeIntervalSince1970:[self.createdTime doubleValue]];
         return date;
     }
     return nil;

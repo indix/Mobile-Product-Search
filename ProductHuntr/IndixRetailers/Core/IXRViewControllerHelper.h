@@ -11,6 +11,7 @@
 #import "IXScannerViewController.h"
 #import "IXRProductListViewController.h"
 #import "IXRSearchDisplayViewController.h"
+#import "IXRCatalogViewController.h"
 
 @interface IXRViewControllerHelper : NSObject
 
@@ -22,10 +23,13 @@
 + (IXScannerViewController *)scannerViewController:(UIStoryboard *)storyboard;
 + (IXRProductListViewController *)productListViewController:(UIStoryboard *)storyboard;
 + (IXRSearchDisplayViewController *)searchDisplayViewController:(UIStoryboard *)storyboard;
-
++ (IXRCatalogViewController *)catalogViewControllerWithProduct:(IXMSavedProduct *)saved_product storyboard:(UIStoryboard *)storyboard;
++ (IXRCatalogViewController *)catalogViewControllerWithProductMpid:(NSString *)mpid storyboard:(UIStoryboard *)storyboard;
 
 + (void)startAViewControllerWithBlurredBackground:(UIViewController *)sourceVC destinationViewController:(UIViewController *)destinationVC completion:(void (^)(UIImageView * blurredImageView, BOOL finished))completion ;
 
 + (UIStoryboard *)retailerStoryboard;
+
+
 
 @end
