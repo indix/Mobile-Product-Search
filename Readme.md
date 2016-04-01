@@ -29,6 +29,7 @@ We have used some third party library in this application and we acknowledge and
 * [REMenu](https://github.com/romaonthego/REMenu/blob/master/LICENSE)
 * [PBWebViewController](https://github.com/kmikael/PBWebViewController/blob/master/LICENSE.txt)
 * [NSString+URLEncoding](https://github.com/kmikael/PBWebViewController/blob/master/LICENSE.txt)
+* [MTBBarcodeScanner](https://github.com/mikebuss/MTBBarcodeScanner/blob/develop/LICENSE)
 
 
 ## Questions?

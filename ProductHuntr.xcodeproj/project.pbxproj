@@ -27,7 +27,6 @@
 		F575C94B1C35026300DA0DC8 /* IXWSearchProductResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5712C9C1C32A6DB00526585 /* IXWSearchProductResultsCell.xib */; };
 		F575C94D1C35026D00DA0DC8 /* WidgetInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5712C9D1C32A6DB00526585 /* WidgetInterface.storyboard */; };
 		F575C94E1C3502AD00DA0DC8 /* IXRetailerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002871C212B2900DA492B /* IXRetailerHelper.m */; };
-		F575C94F1C3502BA00DA0DC8 /* BarCode.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002911C212B2900DA492B /* BarCode.m */; };
 		F575C9501C3502BE00DA0DC8 /* IXApiCore.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0027D1C212B2900DA492B /* IXApiCore.m */; };
 		F575C9511C3502C100DA0DC8 /* IXApiV2Core.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0027F1C212B2900DA492B /* IXApiV2Core.m */; };
 		F575C9521C3502C400DA0DC8 /* IXRApiParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002811C212B2900DA492B /* IXRApiParser.m */; };
@@ -131,7 +130,6 @@
 		F5D003271C212B2900DA492B /* IXRViewControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0028B1C212B2900DA492B /* IXRViewControllerHelper.m */; };
 		F5D003281C212B2900DA492B /* IXSearchSuggestionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D0028D1C212B2900DA492B /* IXSearchSuggestionHelper.m */; };
 		F5D003291C212B2900DA492B /* IndixRetailer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D0028E1C212B2900DA492B /* IndixRetailer.storyboard */; };
-		F5D0032A1C212B2900DA492B /* BarCode.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002911C212B2900DA492B /* BarCode.m */; };
 		F5D0032C1C212B2900DA492B /* IXMBrandFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002951C212B2900DA492B /* IXMBrandFilter.m */; };
 		F5D0032D1C212B2900DA492B /* IXMCategoryFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002971C212B2900DA492B /* IXMCategoryFilter.m */; };
 		F5D0032E1C212B2900DA492B /* IXMCountryCode.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D002991C212B2900DA492B /* IXMCountryCode.m */; };
@@ -327,8 +325,6 @@
 		F5D0028C1C212B2900DA492B /* IXSearchSuggestionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXSearchSuggestionHelper.h; sourceTree = "<group>"; };
 		F5D0028D1C212B2900DA492B /* IXSearchSuggestionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXSearchSuggestionHelper.m; sourceTree = "<group>"; };
 		F5D0028E1C212B2900DA492B /* IndixRetailer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IndixRetailer.storyboard; sourceTree = "<group>"; };
-		F5D002901C212B2900DA492B /* BarCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarCode.h; sourceTree = "<group>"; };
-		F5D002911C212B2900DA492B /* BarCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarCode.m; sourceTree = "<group>"; };
 		F5D002941C212B2900DA492B /* IXMBrandFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXMBrandFilter.h; sourceTree = "<group>"; };
 		F5D002951C212B2900DA492B /* IXMBrandFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXMBrandFilter.m; sourceTree = "<group>"; };
 		F5D002961C212B2900DA492B /* IXMCategoryFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXMCategoryFilter.h; sourceTree = "<group>"; };
@@ -674,8 +670,6 @@
 		F5D0028F1C212B2900DA492B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F5D002901C212B2900DA492B /* BarCode.h */,
-				F5D002911C212B2900DA492B /* BarCode.m */,
 				F5D002941C212B2900DA492B /* IXMBrandFilter.h */,
 				F5D002951C212B2900DA492B /* IXMBrandFilter.m */,
 				F5D002961C212B2900DA492B /* IXMCategoryFilter.h */,
@@ -1316,7 +1310,6 @@
 				F575C95D1C3502EB00DA0DC8 /* IXMFreshness.m in Sources */,
 				F575C9521C3502C400DA0DC8 /* IXRApiParser.m in Sources */,
 				F575C9491C35025800DA0DC8 /* IXWSearchProductResultsCell.m in Sources */,
-				F575C94F1C3502BA00DA0DC8 /* BarCode.m in Sources */,
 				F575C9981C35033700DA0DC8 /* IXRPriceTypeUtils.m in Sources */,
 				F575C95A1C3502E200DA0DC8 /* IXMCountryCode.m in Sources */,
 				F575C9671C35030600DA0DC8 /* IXProduct.m in Sources */,
@@ -1395,7 +1388,6 @@
 				F5D003331C212B2900DA492B /* IXMProductDescriptionAttributes.m in Sources */,
 				F5712CA71C32A70300526585 /* IXWSearchProductResultsCell.m in Sources */,
 				F5D003261C212B2900DA492B /* IXRetailerHelperConfig.m in Sources */,
-				F5D0032A1C212B2900DA492B /* BarCode.m in Sources */,
 				F5D003351C212B2900DA492B /* IXMProductPrice.m in Sources */,
 				F5D003271C212B2900DA492B /* IXRViewControllerHelper.m in Sources */,
 			);

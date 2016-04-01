@@ -17,6 +17,8 @@
 
 @property (nonatomic, assign) id<IXRSearchBarHolderViewDelegate> delegate;
 
+@property (nonatomic, strong) NSString *searchFieldText;
+
 @end
 
 @protocol IXRSearchBarHolderViewDelegate <NSObject>

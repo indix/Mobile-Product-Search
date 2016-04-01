@@ -12,9 +12,6 @@
 
 @interface IXScannerViewController : UIViewController
 
-@property (strong, nonatomic) NSMutableArray * allowedBarcodeTypes;
-
-
 @property (nonatomic, assign) id <IXScannerViewControllerDelegate> scanDelegate;
 @end
 

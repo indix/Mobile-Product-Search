@@ -9,6 +9,12 @@
 #import "IXRSearchBarHolderView.h"
 #import "UIImageEffects.h"
 
+@interface IXRSearchBarHolderView ()
+
+@property (nonatomic, strong) UITextField * searchField;
+
+@end
+
 @implementation IXRSearchBarHolderView
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -68,6 +74,7 @@
     
     [self addSubview:searchBar];
     
+    self.searchField = searchField;
     self.searchBar = searchBar;
 }
 
@@ -82,6 +89,14 @@
 
 - (void)showScannerViewController {
     [self.delegate showScannerViewController];
+}
+
+- (NSString *)searchFieldText {
+    return self.searchField.text;
+}
+
+- (void)setSearchFieldText:(NSString *)searchFieldText {
+    self.searchField.text = searchFieldText;
 }
 
 @end

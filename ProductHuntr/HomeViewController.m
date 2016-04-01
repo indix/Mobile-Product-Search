@@ -65,6 +65,11 @@
     self.navigationController.navigationBar.hidden = NO;
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    self.searchBarholder.searchFieldText = @""; // To clear field
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -91,6 +96,7 @@
 }
 
 - (void)foundBarCodeWithId:(NSString *)barcodeId {
+    self.searchBarholder.searchFieldText = barcodeId;
     [self.navigationController popViewControllerAnimated:YES];
     
     // Save in recent searches if it is success.
