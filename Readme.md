@@ -37,4 +37,6 @@ We have used some third party library in this application and we acknowledge and
 Please get in touch with us at support@indix.com.
 
 
+## Terms of Service
 
+Please refer to [Terms of Service.pdf](https://github.com/ind9/Mobile-Product-Search/blob/master/Terms%20of%20Service.pdf).
