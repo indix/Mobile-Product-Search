@@ -5,14 +5,10 @@
 //  Created by Senthil Kumar on 18/07/14.
 //  Copyright (c) 2014 Indix. All rights reserved.
 //
-#import <AVFoundation/AVFoundation.h>
 #import "IXScannerViewController.h"
-#import "NSString+URLEncoding.h"
 #import "MTBBarcodeScanner.h"
 
-@import AVFoundation;   // iOS7 only import style
-
-@interface IXScannerViewController () <AVCaptureMetadataOutputObjectsDelegate>
+@interface IXScannerViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *previewView;
 
