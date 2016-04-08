@@ -1,5 +1,6 @@
-# Example that showcase product search in mobile app
+This sample app is an example of how the Indix product API can be used to surface product information on across a range of stores, brands and categories. By downloading the code you agree to the SDK Terms of Service found [here](https://github.com/ind9/Mobile-Product-Search/blob/master/Terms%20of%20Service.pdf).
 
+#Overview
 This app is a representation of how Indix API can be used to leverage information on stores, brands, products which forms the skeleton of Retail Industry.
 
 ## How To Get Started
@@ -35,8 +36,3 @@ We have used some third party library in this application and we acknowledge and
 ## Questions?
 
 Please get in touch with us at support@indix.com.
-
-
-## Terms of Service
-
-Please refer to [Terms of Service.pdf](https://github.com/ind9/Mobile-Product-Search/blob/master/Terms%20of%20Service.pdf).
